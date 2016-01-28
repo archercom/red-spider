@@ -4307,4 +4307,15 @@ table.hover tr:nth-of-type(even):hover {
   background-color: tomato;
   color: #fefefe;
   text-shadow: none; }
+
+.global-nav::before, .global-nav::after {
+  content: ' ';
+  display: table; }
+
+.global-nav::after {
+  clear: both; }
+
+.global-nav ul.menu {
+  display: inline-block;
+  float: right; }
 /*# sourceMappingURL=style.css.map */

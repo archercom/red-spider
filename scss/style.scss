@@ -19,3 +19,10 @@
 
 // dat new new
 // here ~***~***~
+.global-nav {
+  @include clearfix;
+  ul.menu {
+    display: inline-block;
+    float: right;
+  }
+}
