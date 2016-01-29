@@ -8,9 +8,9 @@
   'use strict';
 
 
-  
+
   window.Archer = {
-  
+
 
 
     tag: 'Archer',
@@ -59,14 +59,14 @@
         ];
 
         // load Howler
-        if (monte.sound === undefined) {
-          monte.sound = new Howl({
+        if (Archer.sound === undefined) {
+          Archer.sound = new Howl({
             urls: [mp3s[Math.floor(Math.random() * 3)]]
           }).play();
         } else {
           // play new sound. stop other one
-          monte.sound.unload();
-          monte.sound = new Howl({
+          Archer.sound.unload();
+          Archer.sound = new Howl({
             urls: [mp3s[Math.floor(Math.random() * 3)]]
           }).play();
         }
@@ -100,9 +100,9 @@
   // initialize the things
   $(document).ready(function () {
     $(document).foundation();
-    
+
     Archer.init();
-    
+
 
   });
 
