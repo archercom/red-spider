@@ -10,7 +10,10 @@ module.exports = function(grunt) {
     // configuration
     // ----------------------------------------
     images_dir: 'images/',
-    jade_dir: './',
+    jade_dir: 'jade/',
+    jade_inc_dir: 'inc/',
+    jade_pages_dir: 'pages/',
+    // jade_kitchen_dir: 'kitchen-sink/',
     js_files: [
       'js/archer/init.js',
     ],
@@ -21,6 +24,7 @@ module.exports = function(grunt) {
       'bower_components/motion-ui/dist/motion-ui.min.js',
       'bower_components/howler.js/howler.min.js',
       'bower_components/konami-js/konami.js',
+      // 'bower_components/clipboard/dist/clipboard.min.js',
     ],
     misc_dir: 'misc/',
     sass_dir: 'scss/',
@@ -77,7 +81,25 @@ module.exports = function(grunt) {
     // ----------------------------------------
     // 1. compile
     jade: {
-      build: {
+      pages: {
+        options: {
+          compileDebug: false,
+          pretty: true,
+        },
+        files: [
+          {
+            expand: true,
+            cwd: '<%= project.jade_dir %><%= project.jade_pages_dir %>',
+            src: [
+              '*.jade'
+            ],
+            dest: '<%= project.output.folder %>',
+            ext: '.html',
+            flatten: true
+          }
+        ]
+      },
+      types: {
         options: {
           compileDebug: false,
           pretty: true,
@@ -265,9 +287,17 @@ module.exports = function(grunt) {
         files: ['<%= project.sass_dir %>*.scss','<%= project.sass_dir %>**/*.scss'],
         tasks: ['sass:build', 'postcss:build']
       },
+      jade_inc: {
+        files: [ '<%= project.jade_dir %><%= project.jade_inc_dir %>*.jade'],
+        tasks: ['jade']
+      },
       jade_pages: {
+        files: [ '<%= project.jade_dir %><%= project.jade_pages_dir %>*.jade'],
+        tasks: ['newer:jade:pages']
+      },
+      jade_types: {
         files: [ '<%= project.jade_dir %>*.jade'],
-        tasks: ['newer:jade:build']
+        tasks: ['newer:jade:types']
       },
       js: {
         files: '<%= concat.build.src %>',

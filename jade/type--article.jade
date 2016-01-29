@@ -1,0 +1,23 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title Article Title | Archer
+    meta(name="description", content="Archer 2.0, website for 2016")
+    include inc/head.jade
+
+  body
+    a(href="#main").show-for-sr Skip to main content
+    .container
+      include inc/global-header.jade
+
+      main#main.main
+        .row.page-section
+          .columns.medium-8.medium-centered.large-6
+            h1 Article Title
+            strong Author Name
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat tempore, nulla, earum officia molestias inventore dolorum sunt iste quae, asperiores praesentium blanditiis quaerat alias expedita aliquid fugiat consequatur recusandae eos.
+
+      include inc/global-footer.jade
+    include inc/scripts.jade
