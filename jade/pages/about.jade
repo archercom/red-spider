@@ -1,0 +1,42 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title About | Archer
+    meta(name="description", content="Archer 2.0, website for 2016")
+    include ../inc/head.jade
+
+  body
+    a(href="#main").show-for-sr Skip to main content
+    .container
+      include ../inc/global-header.jade
+
+      main#main.main
+        .row.page-section
+          .columns.medium-8.medium-centered.large-6
+
+            .thick-margin-bottom
+              h1 About
+              h2 Our Process
+              p what to expect working with us as a client
+              p outline our steps
+              p our responsibilities, their responsibilities
+              h2 our work culture
+              p who we are,
+              p what we look for,
+              p what we're trying to build → talks about future/plans
+              p photos of the office
+              p Rochester NY, people like local
+              p show who clients are
+              h2 employee profiles
+              ul
+                li picture
+                li bio
+                li educational history (share RIT ties)
+                li company position - show who does what
+                li Showcase articles with our profiles
+                li Show our music taste and personal fun info
+
+      include ../inc/global-footer.jade
+    include ../inc/scripts.jade

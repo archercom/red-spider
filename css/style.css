@@ -4308,14 +4308,25 @@ table.hover tr:nth-of-type(even):hover {
   color: #fefefe;
   text-shadow: none; }
 
-.global-nav::before, .global-nav::after {
-  content: ' ';
-  display: table; }
+.global-nav a {
+  text-transform: uppercase;
+  color: inherit; }
 
-.global-nav::after {
-  clear: both; }
+.main-nav {
+  list-style: none;
+  margin: 0;
+  text-align: right; }
+  @media screen and (min-width: 40em) {
+    .main-nav > li {
+      display: inline-block;
+      margin-right: 0.625rem; } }
 
-.global-nav ul.menu {
-  display: inline-block;
-  float: right; }
+.h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5625rem;
+  margin-bottom: 0; }
+
+.global-header a {
+  color: inherit; }
 /*# sourceMappingURL=style.css.map */

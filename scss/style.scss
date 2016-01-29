@@ -20,9 +20,33 @@
 // dat new new
 // here ~***~***~
 .global-nav {
-  @include clearfix;
-  ul.menu {
-    display: inline-block;
-    float: right;
+  a {
+    text-transform: uppercase;
+    color: inherit;
+  }
+}
+
+.main-nav {
+  list-style: none;
+  margin: 0;
+  text-align: right;
+  @include mq(medium) {
+    > li {
+      display: inline-block;
+      margin-right: rem-calc(10);
+    }
+  }
+}
+
+.h1 {
+  font-size: rem-calc(24);
+  font-weight: bold;
+  line-height: rem-calc(25);
+  margin-bottom: 0;
+  // text-transform: uppercase;
+}
+.global-header {
+  a {
+    color: inherit;
   }
 }
