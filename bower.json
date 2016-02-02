@@ -18,6 +18,7 @@
     "foundation-sites": "~6.1.1",
     "howler.js": "howler#~1.1.27",
     "konami-js": "*",
-    "motion-ui": "~1.1.1"
+    "motion-ui": "~1.1.1",
+    "smoothstate": "~0.7.2"
   }
 }

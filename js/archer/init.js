@@ -6,8 +6,6 @@
 
   window.Archer = {
 
-
-
     tag: 'Archer',
 
     settings: {},
@@ -85,6 +83,8 @@
       // ==================================================
 
       // new things go here
+      // // v1
+      // $('#container').smoothState();
 
     }
 
@@ -95,10 +95,7 @@
   // initialize the things
   $(document).ready(function () {
     $(document).foundation();
-
     Archer.init();
-
-
   });
 
 }($ || jQuery, window, window.document));

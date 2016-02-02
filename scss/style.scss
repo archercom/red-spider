@@ -53,3 +53,38 @@
     color: inherit;
   }
 }
+
+
+
+
+// page transitions
+// ----------------------------------------
+
+/*
+ * Keyframes
+ */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;    // transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.container {
+  // .scene-element, .scene-element--fade-in
+  .main {
+    // animation-duration: 0.25s;
+    animation-duration: 0.3s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+  }
+
+  &.is-exiting .main {
+    animation-direction: alternate-reverse;
+  }
+}
