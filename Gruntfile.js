@@ -25,6 +25,7 @@ module.exports = function(grunt) {
       'bower_components/howler.js/howler.min.js',
       'bower_components/konami-js/konami.js',
       'bower_components/smoothstate/jquery.smoothState.min.js',
+      'bower_components/selection-sharer/dist/selection-sharer.js',
       // 'bower_components/clipboard/dist/clipboard.min.js',
     ],
     misc_dir: 'misc/',

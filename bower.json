@@ -19,6 +19,7 @@
     "howler.js": "howler#~1.1.27",
     "konami-js": "*",
     "motion-ui": "~1.1.1",
-    "smoothstate": "~0.7.2"
+    "smoothstate": "~0.7.2",
+    "selection-sharer": "^0.0.15"
   }
 }

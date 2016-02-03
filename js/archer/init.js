@@ -86,6 +86,7 @@
       // // v1
       // $('#container').smoothState();
 
+      $('.type-article p').selectionSharer();
     }
 
   };

@@ -1,8 +1,3 @@
-/*!
- * archer v0.1.0 (https://lab.luisrosar.io/archer)
- * Copyright 2014-2016 luis rosario //zapo
- */
-
 (function ($, window, document, undefined) {
 
   'use strict';
@@ -91,6 +86,7 @@
       // // v1
       // $('#container').smoothState();
 
+      $('.type-article p').selectionSharer();
     }
 
   };

@@ -6,6 +6,7 @@
 // vendors
 @import "bower_components/foundation-sites/scss/foundation";
 @import "bower_components/motion-ui/motion-ui";
+@import "bower_components/selection-sharer/dist/selection-sharer";
 
 // base styles
 @include foundation-everything;  // invoke foundation scss
