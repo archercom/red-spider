@@ -82,11 +82,20 @@
 
       // ==================================================
 
-      // new things go here
-      // // v1
-      // $('#container').smoothState();
+      // var $header = $('#global-header'),
+      //     headerHeight = $header.height();
+      //     // $header.addClass('sticky');
+      //     // $header.css('width', '100%');
+      //     $('#main').css('padding-top', headerHeight);
+
+
+      // v1
+      $('#container').smoothState({
+        debug: true
+      });
 
       $('.type-article p').selectionSharer();
+
     }
 
   };

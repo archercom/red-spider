@@ -50,8 +50,18 @@
   // text-transform: uppercase;
 }
 .global-header {
+  background-color: $red;
+  color: $white;
   a {
     color: inherit;
+  }
+
+  @include mq(medium) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    backface-visibility: hidden;
   }
 }
 
