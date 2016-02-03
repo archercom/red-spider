@@ -3,7 +3,7 @@ html(lang="en").no-js
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    title Client Name Case Study | Archer
+    title Case Study Title | Archer
     meta(name="description", content="Archer 2.0, website for 2016")
     include inc/head.jade
 
@@ -14,10 +14,41 @@ html(lang="en").no-js
 
       main#main.main
         .row.page-section
-          .columns.medium-8.medium-centered.large-6
-            h1 Client Name Case Study
-            strong A descripion
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat tempore, nulla, earum officia molestias inventore dolorum sunt iste quae, asperiores praesentium blanditiis quaerat alias expedita aliquid fugiat consequatur recusandae eos.
+          .columns.small-12
+            .thick-page-section
+              h1 Case Study Title
+              p.medium-8.large-6 A bit about the client and the issue at hand.
+              a(href="index.html") Site Link
+
+            .thick-page-section
+              h2 Services
+              ul
+                li
+                  span Branding
+                  ul
+                    li Logo
+                li
+                  span Print
+                  ul
+                    li Business cards
+                    li Brochures
+                li
+                  span Web design / web development
+            .thick-page-section
+              h2 Process
+              p how and why we did the things
+            .thick-page-section
+              h2 Results
+              p show variety of pieces
+              ul
+                li Logos
+                li statistics
+            .thick-page-section
+              hr
+              .clearfix
+                a(href="type--case-study.html").float-left Previous Case Study Title
+                a(href="type--case-study.html").float-right Next Case Study Title
+
 
       include inc/global-footer.jade
     include inc/scripts.jade
