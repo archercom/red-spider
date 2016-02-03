@@ -15,92 +15,39 @@ html(lang="en").no-js
       main#main.main
         .row.page-section
           .columns.small-12
-            .thick-margin-bottom
-              h2#contact Contact
-              p Forms, for clients and employees
-              p Blurb about what to expect working with us
-              p list of job openings
-              p Address, “send your carrier pidgeon due North 50 degrees”
-              p phone number
+            .thick-page-section.medium-8.large-6
+              h1 Contact
+              p Blurb about what to expect working with us. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              p Looking to join the team? Whether you're looking for a full-time gig, co-op, or internship, check out our <a href="#">job openings</a>
+
+            .thick-page-section.medium-8.large-6
+              p 252 Alexander Street, <br /> Rochester, New York, <br /> United States, Earth
+              p (585) 867-5309
               form(data-abide, novalidate)
                 .alert.callout(data-abide-error, style="display: none;")
-                  p
-                    i.fi-alert
-                    |  There are some errors in your form.
+                  p There are some errors in your form.
                 .row
                   .small-12.columns
                     label
-                      | Number Required
-                      input(type="text", placeholder="1234", aria-describedby="exampleHelpText", required, pattern="number")
-                      span.form-error
-                        | Yo, you had better fill this out, it's required.
-                    p#exampleHelpText.help-text Here's how you use this input field!
+                      span Name
+                      input(type="text", placeholder="Firstname Lastname", required)
+                      span.form-error We need a name. Give us a name.
+                .row
                   .small-12.columns
                     label
-                      | Nothing Required!
-                      input(type="text", placeholder="Use me, or don't", aria-describedby="exampleHelpTex", data-abide-ignore)
-                    p#exampleHelpTex.help-text This input is ignored by Abide using `data-abide-ignore`
+                      span Email
+                      input(type="text", placeholder="name@email.com", required, pattern="email")
+                      span.form-error We need a valid email to be able to contact you.
+                .row
                   .small-12.columns
                     label
-                      | Password Required
-                      input#password(type="password", placeholder="yeti4preZ", aria-describedby="exampleHelpText", required)
-                      span.form-error
-                        | I'm required!
-                    p#exampleHelpText.help-text Enter a password please.
-                  .small-12.columns
-                    label
-                      | Re-enter Password
-                      input(type="password", placeholder="yeti4preZ", aria-describedby="exampleHelpText2", required, pattern="alpha_numeric", data-equalto="password")
-                      span.form-error
-                        | Hey, passwords are supposed to match!
-                    p#exampleHelpText2.help-text
-                      | This field is using the `data-equalto="password"` attribute, causing it to match the password field above.
+                      span Message
+                      textarea(placeholder="Hi!", required)
                 .row
                   .medium-6.columns
-                    label
-                      | URL Pattern, not required, but throws error if it doesn't match the Regular Expression for a valid URL.
-                      input(type="text", placeholder="http://foundation.zurb.com", pattern="url")
-                  .medium-6.columns
-                    label
-                      | European Cars, Choose One, it can't be the blank option.
-                      select#select(required)
-                        option(value)
-                        option(value="volvo") Volvo
-                        option(value="saab") Saab
-                        option(value="mercedes") Mercedes
-                        option(value="audi") Audi
-                .row
-                  fieldset.large-6.columns
-                    legend Choose Your Favorite, and this is required, so you have to pick one.
-                    input#pokemonRed(type="radio", name="pokemon", value="Red")
-                    label(for="pokemonRed") Red
-                    input#pokemonBlue(type="radio", name="pokemon", value="Blue", required)
-                    label(for="pokemonBlue") Blue
-                    input#pokemonYellow(type="radio", name="pokemon", value="Yellow")
-                    label(for="pokemonYellow") Yellow
-                  fieldset.large-6.columns
-                    legend Choose Your Favorite - not required, you can leave this one blank.
-                    input#pocketsRed(type="radio", name="pockets", value="Red")
-                    label(for="pocketsRed") Red
-                    input#pocketsBlue(type="radio", name="pockets", value="Blue")
-                    label(for="pocketsBlue") Blue
-                    input#pocketsYellow(type="radio", name="pockets", value="Yellow")
-                    label(for="pocketsYellow") Yellow
-                  fieldset.large-6.columns
-                    legend Check these out
-                    input#checkbox1(type="checkbox")
-                    label(for="checkbox1") Checkbox 1
-                    input#checkbox2(type="checkbox", required)
-                    label(for="checkbox2") Checkbox 2
-                    input#checkbox3(type="checkbox")
-                    label(for="checkbox3") Checkbox 3
-                .row
-                  fieldset.large-6.columns
-                    button.button(type="submit", value="Submit") Submit
-                  fieldset.large-6.columns
                     button.button(type="reset", value="Reset") Reset
-              h3#calendar Calendar
-              p sharing events we’ll participate in, be attending (Career fair, Industry Day)
+                  .medium-6.columns
+                    button.button.expanded(type="submit", value="Submit") Submit
 
 
       include ../inc/global-footer.jade
