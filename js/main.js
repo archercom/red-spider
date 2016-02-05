@@ -76,14 +76,8 @@
 
     init: function() {
 
-      // say hello
-      if (console !== undefined) console.log(this.tag);
-
       // add smooth scroll
       this.utils.smooth_scroll();
-
-      // konami /* play sound effect */
-      var easter_egg = new Konami(this.utils.konami);
 
       // ==================================================
 
@@ -93,11 +87,6 @@
       //     // $header.css('width', '100%');
       //     $('#main').css('padding-top', headerHeight);
 
-
-      // v1
-      $('#container').smoothState({
-        debug: true
-      });
 
       var $article = $('.type-article');
       if ($article.length) $article.find('p').selectionSharer();
@@ -133,8 +122,23 @@
 
   // initialize the things
   $(document).ready(function () {
+    // say hello
+    if (console !== undefined) console.log(Archer.tag);
+
+    // business time
     $(document).foundation();
     Archer.init();
+
+    // initialize smmothstate
+    $('#container').smoothState({
+      onAfter: function($container, $newContent) {
+        $newContent.foundation();  // initialize foundation on the new content
+        Archer.init();  // reinitilize our stuff (animations, smooth scrolls)
+      }
+    });
+
+    // konami /* play sound effect */
+    var easter_egg = new Konami(Archer.utils.konami);
   });
 
 }($ || jQuery, window, window.document));
