@@ -103,108 +103,28 @@
       if ($article.length) $article.find('p').selectionSharer();
 
 
+      if ($('#marquee').length) {
+        var typesOfService = [
+          {word: 'web', time: 0.4 },
+          {word: 'print', time: 0.55 },
+          {word: 'branding', time: 1 },
+          {word: 'advertising', time: 1.2 },
+          {word: 'full-service', time: 1.15 }
+        ];
 
-      var typesOfService = [
-        {
-          word: 'web',
-          time: 0.4
-        },
-        {
-          word: 'print',
-          time: 0.55
-        },
-        {
-          word: 'branding',
-          time: 1
-        },
-        {
-          word: 'advertising',
-          time: 1.2
-        },
-        {
-          word: 'full-service',
-          time: 1.15
+        TweenLite.set('#marquee', {perspective:400});
+
+        var animatedText = document.getElementById('#animated-text');
+        var tl = new TimelineLite({
+            delay: 0
+            // delay: 0.4
+          });
+
+        for (var i = 0; i < typesOfService.length; i++) {
+          tl.add(TweenLite.to('#animated-text', 1, {text: {value: ' ' }, delay: 1, ease: Sine.easeIn }) );
+          tl.add(TweenLite.to('#animated-text', typesOfService[i].time, {text: {value: typesOfService[i].word }, delay: 0.125, ease: Sine.easeIn }) );
         }
-      ];
-
-      console.log(typesOfService);
-
-      // var tl = new TimelineLite,
-
-      //     mySplitText = new SplitText("#animated-text", {type:"chars"}),
-      //     // mySplitText = new SplitText("#marquee", {type:"words,chars"}),
-      //     chars = mySplitText.chars; //an array of all the divs that wrap each character
-
-      // // TweenLite.set("#animated-text", {perspective:400});
-      TweenLite.set("#marquee", {perspective:400});
-
-      // // tl.staggerFrom(chars, 0.8, {opacity:0, scale:0, y:80, rotationX:180, transformOrigin:"0% 50% -50",  ease:Back.easeOut}, 0.01, "+=0");
-
-
-      // //replaces yourElement's text with "This is the new text" over the course of 2 seconds
-      // TweenMax.to("#animated-text", 1, {text:{value:"web"}});
-
-
-      var animatedText = document.getElementById('#animated-text');
-      var tl = new TimelineLite({
-        delay: 0.7
-      });
-      // console.log('test');
-      for (var i = 0; i < typesOfService.length; i++) {
-        tl.add(TweenLite.to('#animated-text',
-          1, {
-            text: {value: ' ' },
-            delay: 1.1,
-            ease: Sine.easeIn
-          })
-        );
-        tl.add(TweenLite.to('#animated-text',
-          typesOfService[i].time, {
-            text: {value: typesOfService[i].word },
-            delay: 0.125,
-            ease: Sine.easeIn
-          })
-        );
       }
-
-
-      // var message = $("#message"),
-      //     tl = new TimelineMax({repeat:8, repeatDelay:2, yoyo:true, delay:1});
-
-      // TweenLite.set("#content", {perspective:1200});
-
-      // tl.to(message, 1, {rotationX:-90}, "+=1")
-      //   .set(message, {text:"TWEENING!"})
-      //   .fromTo(message, 1, {rotationX:90}, {rotationX:0, immediateRender:false})
-
-      //   .to(message, 1, {rotationX:-90}, "+=0.5")
-      //   .set(message, {text:"WITH LOVE,"})
-      //   .fromTo(message, 1, {rotationX:90}, {rotationX:0, immediateRender:false})
-
-      //   .to(message, 1, {rotationX:-90}, "+=0.5")
-      //   .set(message, {text:"GreenSock ;)"})
-      //   .fromTo(message, 1, {rotationX:90}, {rotationX:0, immediateRender:false})
-
-      //   .to(message, tl.duration()+ 1, {left:600, ease:Power1.easeInOut}, 0);
-
-
-      // tl.timeScale(3.5);
-
-
-          // tl.add( TweenMax.to(animatedText, 1, {top:50}) );
-          // tl.add( TweenMax.to(animatedText, 1, {opacity:0}) );
-
-
-
-      // document.getElementById("animate").onclick = function() {
-      //   tl.restart();
-      // }
-
-
-
-
-
-
     }
 
   };
