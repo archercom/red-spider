@@ -4504,19 +4504,56 @@ table.hover tr:nth-of-type(even):hover {
   color: #fefefe;
   text-shadow: none; }
 
-.global-nav a {
-  text-transform: uppercase;
-  color: inherit; }
+.global-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #b92d19;
+  color: #fefefe; }
 
-.main-nav {
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #a32816;
+  margin-top: 1.5625rem;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease; }
+  .nav-container.active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+
+.nav-toggle {
+  display: block;
+  width: 100%;
+  text-align: right; }
+
+.nav-list {
   list-style: none;
   margin: 0;
   text-align: right; }
+  .nav-list li {
+    margin: 0.3125rem 0.625rem; }
+  .nav-list a {
+    display: block;
+    text-transform: uppercase;
+    color: #fefefe; }
   @media screen and (min-width: 40em) {
-    .main-nav > li {
+    .nav-list > li {
       display: inline-block;
       margin-right: 0.625rem; }
-      .main-nav > li:last-child {
+      .nav-list > li:last-child {
         margin-right: 0; } }
 
 .h1 {
@@ -4524,20 +4561,8 @@ table.hover tr:nth-of-type(even):hover {
   font-weight: bold;
   line-height: 1.5625rem;
   margin-bottom: 0; }
-
-.global-header {
-  background-color: #b92d19;
-  color: #fefefe; }
-  .global-header a {
+  .h1 a {
     color: inherit; }
-  @media screen and (min-width: 40em) {
-    .global-header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-      -webkit-backface-visibility: hidden;
-              backface-visibility: hidden; } }
 
 .marquee {
   font-size: 2.5rem; }
