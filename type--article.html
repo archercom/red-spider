@@ -19,14 +19,17 @@
           <div class="columns small-6 medium-8">
             <nav class="global-nav">
               <h2 class="show-for-sr">Site Nav</h2>
-              <ul class="main-nav">
-                <li><a href="01--showcase.html">Showcase</a></li>
-                <li><a href="02--services.html">Services</a></li>
-                <li><a href="03--process.html">Process</a></li>
-                <li><a href="04--agency.html">Agency</a></li>
-                <li><a href="05--contact.html">Contact</a></li>
-                <li><a href="06--range.html">Range</a></li>
-              </ul>
+              <button type="button" data-toggle="nav-container" class="nav-toggle">Menu</button>
+              <div id="nav-container" data-toggler=".active" class="nav-container">
+                <ul id="nav-list" class="nav-list">
+                  <li><a href="01--showcase.html">Showcase</a></li>
+                  <li><a href="02--services.html">Services</a></li>
+                  <li><a href="03--process.html">Process</a></li>
+                  <li><a href="04--agency.html">Agency</a></li>
+                  <li><a href="05--contact.html">Contact</a></li>
+                  <li><a href="06--range.html">Range</a></li>
+                </ul>
+              </div>
             </nav>
           </div>
         </div>
@@ -35,7 +38,9 @@
         <div class="row page-section">
           <div class="columns small-12">
             <article class="type-article">
-              <h1>Article Title</h1><strong>Author Name</strong><br><span>February 2, 2016</span>
+              <div class="thick-page-section">
+                <h1>Article Title</h1><strong>Author Name</strong><br><span>February 2, 2016</span>
+              </div>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat tempore, nulla, earum officia molestias inventore dolorum sunt iste quae, asperiores praesentium blanditiis quaerat alias expedita aliquid fugiat consequatur recusandae eos.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit quod vitae voluptates temporibus laborum quam, qui atque. Voluptatum veniam, dolor eos ut harum. Consequuntur saepe beatae ipsam hic, molestias odit.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iure quaerat molestias suscipit ab dignissimos, non officia quia ipsam, praesentium doloremque vel dolorum sit quas deserunt. Assumenda illum, debitis commodi.</p>
@@ -43,6 +48,10 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis eligendi, molestias nesciunt odit explicabo, quisquam corrupti repellat, sint repellendus aliquid maiores ullam tempore ex tenetur voluptatum? Vitae laborum, quibusdam praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, libero. Quod quam, suscipit rem consequuntur maiores consectetur facilis. Dolore animi atque laboriosam assumenda nam tenetur quidem non est corrupti cum.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eaque non autem esse animi repellendus, pariatur eius, dolore repellat, aliquam qui minus provident commodi eum. Beatae veniam accusamus tempore impedit.</p>
             </article>
+            <div class="thick-page-section">
+              <hr>
+              <div class="clearfix"><a href="type--article.html" class="float-left">Previous Article Title</a><a href="type--article.html" class="float-right">Next Article Title</a></div>
+            </div>
           </div>
         </div>
       </main>
