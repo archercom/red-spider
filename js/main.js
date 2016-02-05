@@ -26,16 +26,20 @@
        * @return {N/A}
        */
       smooth_scroll: function () {
-        // smooth scroll - original source below
+        // original sources:
         // http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links
+        // http://stackoverflow.com/questions/7717527/jquery-smooth-scrolling-when-clicking-an-anchor-link
+        var $root = $('html, body');
         $('a[data-smooth-scroll]').on('click.smooth_scroll', function() {
           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
-              $('html,body').animate({
+              $root.animate({
                 scrollTop: target.offset().top
-              }, 1000);
+              }, 1000, function () {
+                  window.location.hash = target.selector;
+              });
 
               return false;
             }

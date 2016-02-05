@@ -1,0 +1,22 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title 403 | Archer
+    meta(name="description", content="Forbidden.")
+    include inc/head.jade
+
+  body
+    a(href="#main").show-for-sr Skip to main content
+    #container.container
+      include inc/global-header.jade
+
+      main#main.main
+        .row.page-section
+          .columns.columns.small-12
+            h1 403
+            p Forbidden.
+
+      include inc/global-footer.jade
+    include inc/scripts.jade
