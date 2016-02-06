@@ -80,13 +80,6 @@
 
       // ==================================================
 
-      // var $header = $('#global-header'),
-      //     headerHeight = $header.height();
-      //     // $header.addClass('sticky');
-      //     // $header.css('width', '100%');
-      //     $('#main').css('padding-top', headerHeight);
-
-
       var $article = $('.type-article');
       if ($article.length) $article.find('p').selectionSharer();
 
@@ -128,8 +121,34 @@
     $(document).foundation();
     Archer.init();
 
+    var $body = $(document.body);
     // initialize smmothstate
     $('#container').smoothState({
+      // onStart: {
+      //   // How long this animation takes
+      //   duration: 2000,
+      //   // A function that dictates the animations that take place
+      //   render: function ($container) {
+      //     console.log($container);
+      //     // $body.animate({
+      //     //   scrollTop: 0
+      //     // });
+      //   }
+      // },
+      // // Runs when a link has been activated
+      // onStart: {
+      //   duration: 250, // Duration of our animation
+      //   render: function (url, $container) {
+      //     console.log(url, $container);
+      //     // toggleAnimationClass() is a public method
+      //     // for restarting css animations with a class
+      //     // content.toggleAnimationClass('is-exiting');
+      //     // Scroll user to the top
+      //     $body.animate({
+      //       scrollTop: 0
+      //     });
+      //   }
+      // },
       onAfter: function($container, $newContent) {
         $newContent.foundation();  // initialize foundation on the new content
         Archer.init();  // reinitilize our stuff (animations, smooth scrolls)
@@ -138,6 +157,9 @@
 
     // konami /* play sound effect */
     var easter_egg = new Konami(Archer.utils.konami);
+
+    // account for sticky menu
+    $('#main').css('padding-top', $('#global-header').height());
   });
 
 }($ || jQuery, window, window.document));

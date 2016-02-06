@@ -1,8 +1,3 @@
-/*!
- * archer v0.1.0 (https://lab.luisrosar.io/archer)
- * Copyright 2014-2016 luis rosario //zapo
- */
-
 @charset "UTF-8";
 /**
  * Foundation for Sites by ZURB
@@ -4524,7 +4519,7 @@ table.hover tr:nth-of-type(even):hover {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   background-color: #a32816;
-  margin-top: 1.5625rem;
+  margin-top: 2.25rem;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   transition: -webkit-transform 0.5s ease;
@@ -4533,11 +4528,21 @@ table.hover tr:nth-of-type(even):hover {
   .nav-container.active {
     -webkit-transform: translateX(0);
             transform: translateX(0); }
+  @media screen and (min-width: 40em) {
+    .nav-container {
+      position: static;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      margin-top: 0; } }
 
 .nav-toggle {
   display: block;
   width: 100%;
-  text-align: right; }
+  text-align: right;
+  padding: 0.625rem 0; }
+  @media screen and (min-width: 40em) {
+    .nav-toggle {
+      display: none; } }
 
 .nav-list {
   list-style: none;
@@ -4559,9 +4564,11 @@ table.hover tr:nth-of-type(even):hover {
 .h1 {
   font-size: 1.5rem;
   font-weight: bold;
-  line-height: 1.5625rem;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  line-height: 1;
+  padding: 0.375rem 0; }
   .h1 a {
+    display: inline-block;
     color: inherit; }
 
 .marquee {
@@ -4569,31 +4576,4 @@ table.hover tr:nth-of-type(even):hover {
   @media screen and (min-width: 40em) {
     .marquee {
       font-size: 4rem; } }
-
-/*
- * Keyframes
- */
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-.container .main {
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  transition-timing-function: ease-in;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn; }
-
-.container.is-exiting .main {
-  -webkit-animation-direction: alternate-reverse;
-          animation-direction: alternate-reverse; }
 /*# sourceMappingURL=style.css.map */
