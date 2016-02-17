@@ -7,11 +7,11 @@
     "url": "https://github.com/aztec8/archer.git"
   },
   "scripts": {
-    "html": "jade --pretty index.jade",
-    "html:watch": "jade --watch --pretty index.jade",
-    "sass": "node-sass --include-path node_modules/foundation-sites/scss style/scss/main.scss style/main.css",
-    "sass:watch": "node-sass --watch --recursive --source-map true --include-path node_modules/foundation-sites/scss style/scss --output style",
-    "css": "npm run sass && postcss --use css-mqpacker --use autoprefixer -o style/main.css style/main.css",
+    "html": "jade --pretty jade/*.jade jade/pages/*.jade -o ./",
+    "html:watch": "jade --pretty --watch jade/*.jade jade/pages/*.jade -o ./",
+    "sass": "node-sass --include-path node_modules/foundation-sites/scss scss/style.scss css/style.css",
+    "sass:watch": "node-sass --watch --recursive --source-map true --include-path node_modules/foundation-sites/scss scss --output css",
+    "css": "npm run sass && postcss --use css-mqpacker --use autoprefixer -o css/style.css css/style.css",
     "js": "browserify scripts/init.js -o scripts/main.js",
     "js:debug": "browserify scripts/init.js -o scripts/main.js --debug",
     "js:watch": "watchify scripts/init.js -o scripts/main.js --debug",
@@ -30,8 +30,7 @@
     "export:js": "npm run js && npm run minify:js && mv scripts/main.min.js export/scripts/main.js",
     "export:assets": "cp -r images/ export/images & cp -r misc/ export/misc & cp favicon.ico export/ & cp apple-touch-icon.png export/",
     "preexport": "mkdir export && mkdir export/style export/scripts",
-    "export": "npm run export:html && npm run export:css && npm run export:js && npm run export:assets",
-    "postinstall": "npm run build"
+    "export": "npm run export:html && npm run export:css && npm run export:js && npm run export:assets"
   },
   "author": "zapo (http://luisrosar.io)",
   "license": "ISC",
