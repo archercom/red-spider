@@ -52,17 +52,20 @@
     "browserify-shim": "^3.8.12",
     "cheet.js": "^0.3.3",
     "foundation-sites": "^6.1.2",
-    "jquery": "^2.2.0"
+    "jquery": "^2.2.0",
+    "smoothstate": "^0.7.2"
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.min.js",
     "foundation": "./node_modules/foundation-sites/dist/foundation.min.js",
-    "cheet": "./node_modules/cheet.js/cheet.min.js"
+    "cheet": "./node_modules/cheet.js/cheet.min.js",
+    "smoothstate": "./node_modules/smoothstate/jquery.smoothState.min.js"
   },
   "browserify-shim": {
     "jquery": "$",
     "foundation": "foundation",
-    "cheet": "cheet"
+    "cheet": "cheet",
+    "smoothstate": "smoothstate"
   },
   "browserify": {
     "transform": [
