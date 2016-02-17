@@ -11,10 +11,10 @@
     "html:watch": "jade --pretty --watch jade/*.jade jade/pages/*.jade -o ./",
     "sass": "node-sass --include-path node_modules/foundation-sites/scss scss/style.scss css/style.css",
     "sass:watch": "node-sass --watch --recursive --source-map true --include-path node_modules/foundation-sites/scss scss --output css",
-    "css": "npm run sass && postcss --use css-mqpacker --use autoprefixer -o css/style.css css/style.css",
-    "js": "browserify scripts/init.js -o scripts/main.js",
-    "js:debug": "browserify scripts/init.js -o scripts/main.js --debug",
-    "js:watch": "watchify scripts/init.js -o scripts/main.js --debug",
+    "css": "npm run sass && postcss --use css-mqpacker --use autoprefixer --use postcss-discard-comments -o css/style.css css/style.css",
+    "js": "browserify js/init.js -o js/scripts.js",
+    "js:debug": "browserify js/init.js -o js/scripts.js --debug",
+    "js:watch": "watchify js/init.js -o js/scripts.js --debug",
     "watch": "npm run html:watch & npm run sass:watch & npm run js:watch",
     "build": "npm run html & npm run css & npm run js",
     "server": "http-server ./ -c-1 -o",
@@ -23,11 +23,11 @@
     "dev": "npm run watch & npm run servers",
     "dev:server": "npm run watch & npm run server",
     "minify:css": "postcss --use cssnano -o style/main.min.css style/main.css",
-    "minify:js": "uglifyjs scripts/main.js --compress --output scripts/main.min.js",
+    "minify:js": "uglifyjs js/scripts.js --compress --output scripts/main.min.js",
     "minify": "npm run minify:css & npm run minify:js",
-    "export:html": "jade index.jade --out export/",
-    "export:css": "postcss --use css-mqpacker --use autoprefixer --use cssnano -o export/style/main.css style/main.css",
-    "export:js": "npm run js && npm run minify:js && mv scripts/main.min.js export/scripts/main.js",
+    "export:html": "jade jade/*.jade jade/pages/*.jade -o ./export",
+    "export:css": "postcss --use css-mqpacker --use autoprefixer --use cssnano -o export/css/style.css css/style.css",
+    "export:js": "npm run js && npm run minify:js && mv scripts/main.min.js export/js/scripts.js",
     "export:assets": "cp -r images/ export/images & cp -r misc/ export/misc & cp favicon.ico export/ & cp apple-touch-icon.png export/",
     "preexport": "mkdir export && mkdir export/style export/scripts",
     "export": "npm run export:html && npm run export:css && npm run export:js && npm run export:assets"
@@ -44,6 +44,7 @@
     "live-server": "^0.9.1",
     "node-sass": "^3.4.2",
     "postcss-cli": "^2.5.1",
+    "postcss-discard-comments": "^2.0.4",
     "uglify-js": "^2.6.1",
     "watchify": "^3.7.0"
   },
@@ -54,9 +55,9 @@
     "jquery": "^2.2.0"
   },
   "browser": {
-    "jquery": "./node_modules/jquery/dist/jquery.js",
-    "foundation": "./node_modules/foundation-sites/dist/foundation.js",
-    "cheet": "./node_modules/cheet.js/cheet.js"
+    "jquery": "./node_modules/jquery/dist/jquery.min.js",
+    "foundation": "./node_modules/foundation-sites/dist/foundation.min.js",
+    "cheet": "./node_modules/cheet.js/cheet.min.js"
   },
   "browserify-shim": {
     "jquery": "$",
