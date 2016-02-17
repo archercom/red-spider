@@ -8,11 +8,11 @@
 // @include foundation-everything;
 // ----------------------------------------
 @include foundation-global-styles;
-@include foundation-flex-grid;
+@include foundation-grid;
 @include foundation-visibility-classes;
 @include foundation-typography;
-// @include foundation-button;
-// @include foundation-forms;
+@include foundation-button;
+@include foundation-forms;
 // @include foundation-float-classes;
 // @include foundation-accordion;
 // @include foundation-accordion-menu;
@@ -141,5 +141,67 @@
   font-size: rem-calc(40);
   @include breakpoint('medium') {
     font-size: rem-calc(64);
+  }
+}
+
+
+// effect 1 - arrow through
+// ----------------------------------------
+@keyframes arrow-through {
+  0% {
+    transform: translateX(-105%);
+  }
+  100% {
+    transform: translateX(105%);
+  }
+}
+
+.effect-1 {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "\0a0";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    height: rem-calc(2);
+    width: 100%;
+    background-color: $white;
+    transform: translateX(-105%);
+  }
+  &:hover {
+    &:before {
+      animation-name: arrow-through;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+
+
+
+// cursor effect
+// ----------------------------------------
+.cursor {
+  display: inline-block;
+  background-color: $red;
+  max-width: rem-calc(6);
+  animation-name: pulse;
+  animation-duration: 0.9s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
