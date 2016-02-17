@@ -2,6 +2,7 @@ var $ = require('jquery');
 var foundation = require('foundation');
 var cheet = require('cheet');
 var smoothstate = require('smoothstate');
+var typedjs = require('typedjs');
 
 var archer = {
   init: function () {
@@ -23,7 +24,19 @@ var archer = {
         }
       }
     });
-  }
+
+
+    // typed.js
+    $("#animated-text").typed({
+        strings: ['', 'web', 'print', 'branding', 'advertising', 'full-service'],
+        typeSpeed: 100,
+        startDelay: 1500,
+        backDelay: 1750,
+        callback: function () {
+          $('.typed-cursor').addClass('off');
+        }
+      });
+    }
 }
 
 // initialize the things

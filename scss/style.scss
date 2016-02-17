@@ -184,14 +184,19 @@
 
 // cursor effect
 // ----------------------------------------
-.cursor {
-  display: inline-block;
-  background-color: $red;
-  max-width: rem-calc(6);
+.typed-cursor {
+  // display: inline-block;
+  // background-color: $red;
+  // max-width: rem-calc(6);
   animation-name: pulse;
   animation-duration: 0.9s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
+  &.off {
+    animation-iteration-count: 1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
 }
 
 @keyframes pulse {
