@@ -1538,6 +1538,8 @@ select{
   text-shadow:none; }
 
 .global-header{
+  background-color:#b92d19;
+  color:#FFFFFF;
   position:fixed;
   top:0;
   left:0;
@@ -1545,8 +1547,26 @@ select{
   z-index:100;
   -webkit-backface-visibility:hidden;
           backface-visibility:hidden;
-  background-color:#b92d19;
-  color:#FFFFFF; }
+  -webkit-transition:-webkit-transform 0.4s ease;
+  transition:-webkit-transform 0.4s ease;
+  transition:transform 0.4s ease;
+  transition:transform 0.4s ease, -webkit-transform 0.4s ease; }
+  .global-header.detached.hidden{
+    -webkit-transform:translateY(-90%);
+            transform:translateY(-90%); }
+    .global-header.detached.hidden:hover{
+      -webkit-transform:translateY(0);
+              transform:translateY(0); }
+
+.h1{
+  font-size:1.5rem;
+  font-weight:bold;
+  margin-bottom:0;
+  line-height:1;
+  padding:0.375rem 0; }
+  .h1 a{
+    display:inline-block;
+    color:inherit; }
 
 .nav-container{
   position:fixed;
@@ -1584,16 +1604,6 @@ select{
     display:block;
     text-transform:uppercase;
     color:#FFFFFF; }
-
-.h1{
-  font-size:1.5rem;
-  font-weight:bold;
-  margin-bottom:0;
-  line-height:1;
-  padding:0.375rem 0; }
-  .h1 a{
-    display:inline-block;
-    color:inherit; }
 
 .marquee{
   font-size:2.5rem; }

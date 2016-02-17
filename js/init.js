@@ -3,6 +3,9 @@ var foundation = require('foundation');
 var cheet = require('cheet');
 var smoothstate = require('smoothstate');
 var typedjs = require('typedjs');
+var scrollMonitor = require('scrollMonitor');
+var hideOnScroll = require('hide-on-scroll');
+
 
 var archer = {
   init: function () {
@@ -25,9 +28,10 @@ var archer = {
       }
     });
 
-
     // typed.js
-    $("#animated-text").typed({
+    var $animatedText = $('#animated-text');
+    if ($animatedText.length) {
+      $animatedText.typed({
         strings: ['', 'web', 'print', 'branding', 'advertising', 'full-service'],
         typeSpeed: 100,
         startDelay: 1500,
@@ -37,6 +41,19 @@ var archer = {
         }
       });
     }
+
+    // nice headers thanks to scrollMonitor + hideOnScroll
+    var $globalHeader = $('#global-header');
+    var watcher = scrollMonitor.create($globalHeader);
+        watcher.lock(); // ensure that we're always watching the place the element originally was
+        watcher.exitViewport( function()  {$globalHeader.addClass('detached'); });
+        watcher.enterViewport( function() {$globalHeader.removeClass('detached'); });
+
+    hideOnScroll({
+      navbarSelector: '#global-header',
+      hidingClass: 'hidden'
+    });
+  }
 }
 
 // initialize the things
