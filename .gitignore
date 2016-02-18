@@ -1,6 +1,4 @@
-build
+export
 node_modules
-bower_components
 *.map
 *.html
-greensock
