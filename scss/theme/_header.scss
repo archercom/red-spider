@@ -1,4 +1,6 @@
 .global-header {
+  // border: rem-calc(20) solid $white;
+  // border-bottom: none;
   background-color: $red;
   color: $white;
   position: fixed;
@@ -23,6 +25,7 @@
   margin-bottom: 0;
   line-height: 1;
   padding: rem-calc(6 0);
+  text-transform: lowercase;
   a {
     display: inline-block;
     color: inherit;

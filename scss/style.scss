@@ -61,6 +61,7 @@
 
 
 .marquee {
+  text-transform: none;
   font-size: rem-calc(40);
   @include breakpoint(medium) {
     font-size: rem-calc(64);
@@ -170,3 +171,11 @@
     }
   }
 }
+
+// .container {
+//   border: rem-calc(20) solid $white;
+// }
+
+// h1, h2, h3, h4, h5, h6 {
+//   text-transform: uppercase;
+// }
