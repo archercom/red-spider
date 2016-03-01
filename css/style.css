@@ -151,7 +151,7 @@ html{
 body{
   padding:0;
   margin:0;
-  font-family:"Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family:"proxima-nova-condensed", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight:normal;
   line-height:1.5;
   color:#444444;
@@ -585,8 +585,8 @@ h3,
 h4,
 h5,
 h6{
-  font-family:"Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight:normal;
+  font-family:"proxima-nova-condensed", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight:800;
   font-style:normal;
   color:inherit;
   text-rendering:optimizeLegibility;
