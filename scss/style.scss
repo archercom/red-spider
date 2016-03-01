@@ -179,3 +179,36 @@
 // h1, h2, h3, h4, h5, h6 {
 //   text-transform: uppercase;
 // }
+
+.test-1 {
+  background-color: $red;
+  color: $white;
+  padding: 10% 5%;
+  h2 {
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: rem-calc(60);
+  }
+  small {
+    display: block;
+    margin-top: 30%;
+  }
+}
+
+.test-3 {
+  h2 {
+    margin-top: rem-calc(60);
+    color: $red;
+    // text-transform: uppercase;
+    // font-size: rem-calc(60);
+  }
+  img {
+    margin-bottom: rem-calc(20);
+  }
+  strong {
+    display: block;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: rem-calc(10);
+  }
+}

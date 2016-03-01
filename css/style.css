@@ -561,7 +561,7 @@ td{
 
 p{
   font-size:inherit;
-  line-height:1.6;
+  line-height:1.4;
   margin-bottom:1rem;
   text-rendering:optimizeLegibility; }
 
@@ -592,7 +592,7 @@ h6{
   text-rendering:optimizeLegibility;
   margin-top:0;
   margin-bottom:0.5rem;
-  line-height:1.4; }
+  line-height:1.1; }
   h1 small,
   h2 small,
   h3 small,
@@ -643,7 +643,7 @@ hr{
 ul,
 ol,
 dl{
-  line-height:1.6;
+  line-height:1.4;
   margin-bottom:1rem;
   list-style-position:outside; }
 
@@ -672,7 +672,7 @@ blockquote{
   padding:0.5625rem 1.25rem 0 1.1875rem;
   border-left:1px solid #cacaca; }
   blockquote, blockquote p{
-    line-height:1.6;
+    line-height:1.4;
     color:#8a8a8a; }
 
 cite{
@@ -1702,7 +1702,33 @@ select{
       margin-right:0; }
     #konami span.pressed, #konami small.pressed{
       opacity:1; }
-    @media screen and (min-width: 40em){
+
+.test-1{
+  background-color:#b92d19;
+  color:#FFFFFF;
+  padding:10% 5%; }
+  .test-1 h2{
+    text-transform:uppercase;
+    line-height:1;
+    font-size:3.75rem; }
+  .test-1 small{
+    display:block;
+    margin-top:30%; }
+
+.test-3 h2{
+  margin-top:3.75rem;
+  color:#b92d19; }
+
+.test-3 img{
+  margin-bottom:1.25rem; }
+
+.test-3 strong{
+  display:block;
+  font-weight:normal;
+  font-style:italic;
+  margin-bottom:0.625rem; }
+
+@media screen and (min-width: 40em){
   .row .row{
     margin-left:-0.9375rem;
     margin-right:-0.9375rem; }
@@ -2045,7 +2071,8 @@ select{
   .header-1{
     font-size:3.75rem;
     padding:7.5rem 0; } }
-    @media screen and (min-width: 64em){
+
+@media screen and (min-width: 64em){
   .large-1{
     width:8.33333%; }
   .large-push-1{
@@ -2356,45 +2383,56 @@ select{
   .header-1{
     font-size:6.25rem;
     padding:12.5rem 0; } }
-    @media screen and (min-width: 0em) and (max-width: 39.9375em){
+
+@media screen and (min-width: 0em) and (max-width: 39.9375em){
   .hide-for-small-only{
     display:none !important; } }
-    @media screen and (max-width: 0em), screen and (min-width: 40em){
+
+@media screen and (max-width: 0em), screen and (min-width: 40em){
   .show-for-small-only{
     display:none !important; } }
-    @media screen and (max-width: 39.9375em){
+
+@media screen and (max-width: 39.9375em){
   .show-for-medium{
     display:none !important; } }
-    @media screen and (min-width: 40em) and (max-width: 63.9375em){
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em){
   .hide-for-medium-only{
     display:none !important; } }
-    @media screen and (max-width: 39.9375em), screen and (min-width: 64em){
+
+@media screen and (max-width: 39.9375em), screen and (min-width: 64em){
   .show-for-medium-only{
     display:none !important; } }
-    @media screen and (max-width: 63.9375em){
+
+@media screen and (max-width: 63.9375em){
   .show-for-large{
     display:none !important; } }
-    @media screen and (min-width: 64em) and (max-width: 74.9375em){
+
+@media screen and (min-width: 64em) and (max-width: 74.9375em){
   .hide-for-large-only{
     display:none !important; } }
-    @media screen and (max-width: 63.9375em), screen and (min-width: 75em){
+
+@media screen and (max-width: 63.9375em), screen and (min-width: 75em){
   .show-for-large-only{
     display:none !important; } }
-    @media screen and (orientation: landscape){
+
+@media screen and (orientation: landscape){
   .show-for-landscape,
     .hide-for-portrait{
     display:block !important; }
   .hide-for-landscape,
     .show-for-portrait{
     display:none !important; } }
-    @media screen and (orientation: portrait){
+
+@media screen and (orientation: portrait){
   .show-for-landscape,
     .hide-for-portrait{
     display:none !important; }
   .hide-for-landscape,
     .show-for-portrait{
     display:block !important; } }
-    @media print{
+
+@media print{
   *{
     background:transparent !important;
     color:black !important;
@@ -2448,6 +2486,7 @@ select{
   h2,
   h3{
     page-break-after:avoid; } }
-    @media screen and (min-width: 0\0){
+
+@media screen and (min-width: 0\0){
   select{
     background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg=="); } }
