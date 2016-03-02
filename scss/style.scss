@@ -56,13 +56,20 @@
 
 @import "theme/header";
 @import "theme/nav";
+@import "theme/footer";
 
+.main {
+  position: relative;
+  z-index: 10;
+  background-color: $white;
+}
 
 
 
 .marquee {
+  text-transform: none;
   font-size: rem-calc(40);
-  @include breakpoint('medium') {
+  @include breakpoint(medium) {
     font-size: rem-calc(64);
   }
 }
@@ -74,8 +81,15 @@
   0% {
     transform: translateX(-105%);
   }
+  10% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
   100% {
     transform: translateX(105%);
+    // opacity: 0;
   }
 }
 
@@ -87,17 +101,35 @@
     content: "\0a0";
     display: inline-block;
     position: absolute;
-    top: 50%;
-    height: rem-calc(2);
+    top: 45%;
+    height: rem-calc(1);
     width: 100%;
     background-color: $white;
+    background-color: currentColor;
     transform: translateX(-105%);
+    backface-visibility: hidden;
+    pointer-events: none;
+  }
+  &:after {
+    content: "→";
+    display: inline-block;
+    margin-left: rem-calc(5);
+    opacity: 0;
+    transform: translateX(rem-calc(-5));
+    transition: opacity 0.3s ease,transform 0.3s ease;
+    transition-delay: 0.1s;
+    backface-visibility: hidden;
+    pointer-events: none;
   }
   &:hover {
     &:before {
       animation-name: arrow-through;
-      animation-duration: 0.3s;
+      animation-duration: 0.5s;
       animation-fill-mode: forwards;
+    }
+    &:after {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 }
@@ -108,9 +140,6 @@
 // cursor effect
 // ----------------------------------------
 .typed-cursor {
-  // display: inline-block;
-  // background-color: $red;
-  // max-width: rem-calc(6);
   animation-name: pulse;
   animation-duration: 0.9s;
   animation-timing-function: ease;
@@ -131,5 +160,58 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+
+.header-1 {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: rem-calc(40);
+  padding: rem-calc(40 0);
+  margin: 0;
+  span {
+    display: block;
+  }
+  @include breakpoint(medium) {
+    font-size: rem-calc(60);
+    padding: rem-calc(120 0);
+  }
+  @include breakpoint(large) {
+    font-size: rem-calc(100);
+    padding: rem-calc(200 0);
+  }
+}
+
+.test-1 {
+  background-color: $red;
+  color: $white;
+  padding: 10% 5%;
+  h2 {
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: rem-calc(60);
+  }
+  small {
+    display: block;
+    margin-top: 30%;
+  }
+}
+
+.test-3 {
+  h2 {
+    margin-top: rem-calc(60);
+    color: $red;
+  }
+  img {
+    margin-bottom: rem-calc(20);
+  }
+  strong {
+    display: block;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: rem-calc(10);
   }
 }

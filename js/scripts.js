@@ -29,6 +29,27 @@ var archer = {
       }
     });
 
+
+    // konami
+    var konamiKeys = $('#konami').children().toArray();
+    cheet('↑ ↑ ↓ ↓ ← → ← → b a', {
+      next: function (str, key, num, seq) {
+        konamiKeys[num].className = 'pressed';
+      },
+      fail: function () {
+        for (var i = 0; i < konamiKeys.length; i++) {
+          konamiKeys[i].removeAttribute('class');
+        }
+      },
+      done: function () {
+        for (var i = 0; i < konamiKeys.length; i++) {
+          konamiKeys[i].removeAttribute('class');
+        }
+        alert('yo');
+      }
+    });
+
+
     // typed.js
     var $animatedText = $('#animated-text');
     if ($animatedText.length) {
@@ -54,6 +75,9 @@ var archer = {
       navbarSelector: '#global-header',
       hidingClass: 'hidden'
     });
+
+    // slick reveal of the footer
+    $('#main').css('margin-bottom', $('#global-footer').css('height'));
   }
 }
 
@@ -63,7 +87,7 @@ $(document).ready(function () {
   // foundation
   $(document).foundation();
 
-  // smooth scrolls and othe page things
+  // smooth scrolls and other page things
   archer.init();
 
   // smoothstate
@@ -74,10 +98,6 @@ $(document).ready(function () {
       archer.init();
     }
   });
-
-  // konami
-  cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () { alert('Voilà!'); });
-
 });
 
 },{"cheet":2,"foundation":3,"hide-on-scroll":4,"jquery":6,"scrollMonitor":7,"smoothstate":8,"typedjs":9}],2:[function(require,module,exports){
