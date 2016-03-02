@@ -74,6 +74,9 @@ var archer = {
       navbarSelector: '#global-header',
       hidingClass: 'hidden'
     });
+
+    // slick reveal of the footer
+    $('#main').css('margin-bottom', $('#global-footer').css('height'));
   }
 }
 

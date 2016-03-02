@@ -56,7 +56,13 @@
 
 @import "theme/header";
 @import "theme/nav";
+@import "theme/footer";
 
+.main {
+  position: relative;
+  z-index: 10;
+  background-color: $white;
+}
 
 
 
