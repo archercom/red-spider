@@ -8,3 +8,21 @@
   z-index: 0;
   backface-visibility: hidden;
 }
+
+
+#konami {
+  margin: 0;
+  font-size: rem-calc(12);
+  letter-spacing: 3px;
+  span, small {
+    opacity: 0.3;
+    margin-right: rem-calc(5);
+    transition: opacity 0.2s ease;
+    &:last-child {
+      margin-right: 0;
+    }
+    &.pressed {
+      opacity: 1;
+    }
+  }
+}

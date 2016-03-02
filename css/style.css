@@ -1618,6 +1618,20 @@ select{
   -webkit-backface-visibility:hidden;
           backface-visibility:hidden; }
 
+#konami{
+  margin:0;
+  font-size:0.75rem;
+  letter-spacing:3px; }
+  #konami span, #konami small{
+    opacity:0.3;
+    margin-right:0.3125rem;
+    -webkit-transition:opacity 0.2s ease;
+    transition:opacity 0.2s ease; }
+    #konami span:last-child, #konami small:last-child{
+      margin-right:0; }
+    #konami span.pressed, #konami small.pressed{
+      opacity:1; }
+
 .main{
   position:relative;
   z-index:10;
@@ -1739,18 +1753,6 @@ select{
   margin:0; }
   .header-1 span{
     display:block; }
-
-#konami{
-  margin:0; }
-  #konami span, #konami small{
-    opacity:0.3;
-    margin-right:0.3125rem;
-    -webkit-transition:opacity 0.2s ease;
-    transition:opacity 0.2s ease; }
-    #konami span:last-child, #konami small:last-child{
-      margin-right:0; }
-    #konami span.pressed, #konami small.pressed{
-      opacity:1; }
 
 .test-1{
   background-color:#b92d19;

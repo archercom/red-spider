@@ -185,20 +185,6 @@
   }
 }
 
-#konami {
-  margin: 0;
-  span, small {
-    opacity: 0.3;
-    margin-right: rem-calc(5);
-    transition: opacity 0.2s ease;
-    &:last-child {
-      margin-right: 0;
-    }
-    &.pressed {
-      opacity: 1;
-    }
-  }
-}
 
 // .container {
 //   border: rem-calc(20) solid $white;
