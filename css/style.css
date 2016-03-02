@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html{
   font-family:sans-serif;
@@ -1630,6 +1631,10 @@ select{
   0%{
     -webkit-transform:translateX(-105%);
             transform:translateX(-105%); }
+  10%{
+    opacity:1; }
+  70%{
+    opacity:0; }
   100%{
     -webkit-transform:translateX(105%);
             transform:translateX(105%); } }
@@ -1638,6 +1643,10 @@ select{
   0%{
     -webkit-transform:translateX(-105%);
             transform:translateX(-105%); }
+  10%{
+    opacity:1; }
+  70%{
+    opacity:0; }
   100%{
     -webkit-transform:translateX(105%);
             transform:translateX(105%); } }
@@ -1650,19 +1659,43 @@ select{
     content:"\0a0";
     display:inline-block;
     position:absolute;
-    top:50%;
-    height:0.125rem;
+    top:45%;
+    height:0.0625rem;
     width:100%;
     background-color:#FFFFFF;
+    background-color:currentColor;
     -webkit-transform:translateX(-105%);
-            transform:translateX(-105%); }
+            transform:translateX(-105%);
+    -webkit-backface-visibility:hidden;
+            backface-visibility:hidden;
+    pointer-events:none; }
+  .effect-1:after{
+    content:"→";
+    display:inline-block;
+    margin-left:0.3125rem;
+    opacity:0;
+    -webkit-transform:translateX(-0.3125rem);
+            transform:translateX(-0.3125rem);
+    -webkit-transition:opacity 0.3s ease,-webkit-transform 0.3s ease;
+    transition:opacity 0.3s ease,-webkit-transform 0.3s ease;
+    transition:opacity 0.3s ease,transform 0.3s ease;
+    transition:opacity 0.3s ease,transform 0.3s ease,-webkit-transform 0.3s ease;
+    -webkit-transition-delay:0.1s;
+            transition-delay:0.1s;
+    -webkit-backface-visibility:hidden;
+            backface-visibility:hidden;
+    pointer-events:none; }
   .effect-1:hover:before{
     -webkit-animation-name:arrow-through;
             animation-name:arrow-through;
-    -webkit-animation-duration:0.3s;
-            animation-duration:0.3s;
+    -webkit-animation-duration:0.5s;
+            animation-duration:0.5s;
     -webkit-animation-fill-mode:forwards;
             animation-fill-mode:forwards; }
+  .effect-1:hover:after{
+    opacity:1;
+    -webkit-transform:translateX(0);
+            transform:translateX(0); }
 
 .typed-cursor{
   -webkit-animation-name:pulse;
