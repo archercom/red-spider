@@ -100,3 +100,30 @@ p {
   z-index: 10;
   background-color: $snow;
 }
+
+.next-block {
+  background-color: $jumbo;
+  text-align: center;
+  margin-bottom: rem-calc(30);
+  padding-top: rem-calc(20);
+  h3 {
+    margin: rem-calc(10 0 20);
+  }
+  a {
+    @include page-section(15);
+    display: block;
+    color: inherit;
+    font-weight: $extra-bold;
+    border-top: rem-calc(4) solid $base;
+    // margin-top: rem-calc(10);
+  }
+
+  @include breakpoint(medium) {
+    margin-bottom: 0;
+  }
+}
+
+.circle {
+  @include circle(rem-calc(40), $base);
+  // margin: rem-calc(10) auto;
+}
