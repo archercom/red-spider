@@ -39,8 +39,8 @@
 
 // padding-top, padding-bottom
 @mixin page-section($size) {
-  padding-top: $size;
-  padding-bottom: $size;
+  padding-top: rem-calc($size);
+  padding-bottom: rem-calc($size);
 }
 
 
