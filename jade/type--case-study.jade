@@ -1,40 +1,80 @@
 extends type--page.jade
 
 block title
-  title Case Study Title | Archer
+  title Lyons National Bank | Archer
 
 block content
-  .row.page-section
-    .columns.small-12
-      .thick-page-section
-        h1 Case Study Title
-        p.medium-8.large-6 A bit about the client and the issue at hand.
-        a(href="index.html") Site Link
+  header.page-header
+    .row
+      .columns.small-12.medium-8.medium-offset-4.large-7.large-offset-5
+        h1.page-title.v2 Lyons <br class="show-for-medium"/> National Bank
 
-      .thick-page-section
-        h2 Services
-        ul
-          li
-            span Branding
-            ul
-              li Logo
-          li
-            span Print
-            ul
-              li Business cards
-              li Brochures
-          li
-            span Web design / web development
-      .thick-page-section
-        h2 Process
-        p how and why we did the things
-      .thick-page-section
-        h2 Results
-        p show variety of pieces
-        ul
-          li Logos
-          li statistics
-      .thick-page-section
+  .page-content
+    .row
+      .columns.small-12.medium-8.large-7.medium-order-2
+        .box.overview-box
+          p.page-subtitle Minus voluptas repellendus ducimus, voluptates, ex ut odio tempore.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptatum quasi dolorem cumque. Porro blanditiis nihil fugit laudantium officiis accusantium assumenda veritatis illum voluptatibus, iusto ipsum ex praesentium, sed a.
+      .columns.small-12.medium-4.large-5.medium-order-1
+        figure.img-1
+          img(src="images/freedom.jpg", alt="")
+    .row
+      .columns.small-12
+        h2 Our Mission
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada nec leo nec semper.
+    .row.thick-row
+      .columns.small-12.medium-8
+        h2 Lorem ipsum
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada nec leo nec semper. Phasellus malesuada rutrum.
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum nibh. Maecenas viverra nisi lectus, ac egestas lacus convallis id. Curabitur eget diam diam. Ut euismod lobortis molestie. Nam porta metus nibh, non maximus est varius nec.
+        p Aliquam mollis rutrum augue sed elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      .columns.small-12.medium-4.text-center
+        img(src="images/freedom.jpg", alt="")
+    .row.collapse.expanded
+      .columns.text-center
+        img(src="images/dusk.jpg", alt="").full
+    .row.thick-row
+      .columns.small-12.medium-9.large-7
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada nec leo nec semper. Phasellus malesuada rutrum.
+        p.two-cols Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quam consectetur non nemo at, aliquid optio voluptatem iste in ad itaque quas laudantium maxime, odio aut et minus. Eveniet, sapiente! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ea eveniet placeat dolor consequuntur voluptatibus, provident reiciendis assumenda? Fugit nam, animi iusto hic et sit quos eveniet. Magnam, totam, fuga.
+    .row.thick-row
+      .columns.small-12.medium-8.medium-order-2
+        h2 Lorem ipsum
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada nec leo nec semper. Phasellus malesuada rutrum.
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in vestibulum nibh. Maecenas viverra nisi lectus, ac egestas lacus convallis id. Curabitur eget diam diam. Ut euismod lobortis molestie. Nam porta metus nibh, non maximus est varius nec.
+        p Aliquam mollis rutrum augue sed elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      .columns.small-12.medium-4.medium-order-1.text-center
+        img(src="images/freedom.jpg", alt="")
+    //- grid of images
+    .row.small-up-2.medium-up-3.large-up-4.expanded.collapse
+      .column
+        img(src="images/freedom.jpg", alt="").full
+      .column
+        img(src="images/freedom.jpg", alt="").full
+      .column
+        img(src="images/freedom.jpg", alt="").full
+      .column
+        img(src="images/freedom.jpg", alt="").full
+      .column
+        img(src="images/freedom.jpg", alt="").full
+      .column
+        img(src="images/freedom.jpg", alt="").full
+      .column
+        img(src="images/freedom.jpg", alt="").full
+      .column
+        img(src="images/freedom.jpg", alt="").full
+
+    .row.thick-row.align-center
+      .columns.small-12.text-center.medium-8.large-6
+        h3 Next Case Study:
+        a(href="#").showcase-block.margin-bottom
+          h4 Trevett Cristo
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        a(href="01--showcase.html").round-button View Showcase
+
+
+    //- .row
+      .columns.small-12
         hr
         .clearfix
           a(href="type--case-study.html").float-left Previous Case Study Title

@@ -243,10 +243,16 @@ p {
 .page-title {
   text-transform: uppercase;
   font-size: rem-calc(50);
+  line-height: 1;
   @include breakpoint(medium) {
     font-size: rem-calc(100);
+    margin-bottom: rem-calc(30);
+    &.v2 {
+      font-size: rem-calc(60);
+    }
   }
 }
+
 
 .page-subtitle {
   font-size: rem-calc(40);
@@ -287,7 +293,6 @@ p {
     }
   }
   @include breakpoint(large) {
-    // margin: rem-calc(80 0);
     li {
       margin: rem-calc(80 0);
     }
@@ -333,4 +338,45 @@ p {
 
 .pos-rel {
   position: relative;
+}
+
+.two-cols {
+  @include breakpoint(medium) {
+    -webkit-column-count: 2;
+  }
+}
+
+.thick-row {
+  @include page-section(50);
+  @include breakpoint(medium) {
+    @include page-section(70);
+  }
+  @include breakpoint(large) {
+    @include page-section(90);
+  }
+}
+
+
+.showcase-block {
+  color: inherit;
+  display: block;
+  border: 3px solid;
+  padding: rem-calc(20);
+  p:last-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    color: inherit;
+  }
+}
+
+.round-button {
+  font-weight: $extra-bold;
+  background-color: $monsoon;
+  color: $white;
+  padding: rem-calc(10 25);
+  border-radius: rem-calc(20);
+  &:hover {
+    color: $white;
+  }
 }

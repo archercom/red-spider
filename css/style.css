@@ -1878,7 +1878,8 @@ select{
 
 .page-title{
   text-transform:uppercase;
-  font-size:3.125rem; }
+  font-size:3.125rem;
+  line-height:1; }
 
 .page-subtitle{
   font-size:2.5rem;
@@ -1915,7 +1916,29 @@ select{
 .pos-rel{
   position:relative; }
 
-@media screen and (min-width: 40em){
+.thick-row{
+  padding-top:3.125rem;
+  padding-bottom:3.125rem; }
+
+.showcase-block{
+  color:inherit;
+  display:block;
+  border:3px solid;
+  padding:1.25rem; }
+  .showcase-block p:last-child{
+    margin-bottom:0; }
+  .showcase-block:hover{
+    color:inherit; }
+
+.round-button{
+  font-weight:800;
+  background-color:#777777;
+  color:#fefefe;
+  padding:0.625rem 1.5625rem;
+  border-radius:1.25rem; }
+  .round-button:hover{
+    color:#fefefe; }
+  @media screen and (min-width: 40em){
   .row .row{
     margin-left:-0.9375rem;
     margin-right:-0.9375rem; }
@@ -2356,7 +2379,10 @@ select{
   .page-header{
     padding-bottom:3.75rem; }
   .page-title{
-    font-size:6.25rem; }
+    font-size:6.25rem;
+    margin-bottom:1.875rem; }
+  .page-title.v2{
+    font-size:3.75rem; }
   .client-list{
     margin:5rem 0; }
   .client-list li{
@@ -2372,16 +2398,19 @@ select{
     right:0;
     top:-100%; }
   .testimonial p{
-    font-size:1.625rem; } }
-
-@media screen and (min-width: 40em) and (min-width: 40em){
+    font-size:1.625rem; }
+  .two-cols{
+    -webkit-column-count:2; }
+  .thick-row{
+    padding-top:4.375rem;
+    padding-bottom:4.375rem; } }
+  @media screen and (min-width: 40em) and (min-width: 40em){
   .medium-expand{
     -webkit-box-flex:1;
     -webkit-flex:1 1 0px;
         -ms-flex:1 1 0px;
             flex:1 1 0px; } }
-
-@media screen and (min-width: 64em){
+  @media screen and (min-width: 64em){
   .large-1{
     -webkit-box-flex:0;
     -webkit-flex:0 0 8.33333%;
@@ -2794,16 +2823,17 @@ select{
   .img-1{
     margin-top:25%; }
   .testimonial p{
-    font-size:2rem; } }
-
-@media screen and (min-width: 64em) and (min-width: 64em){
+    font-size:2rem; }
+  .thick-row{
+    padding-top:5.625rem;
+    padding-bottom:5.625rem; } }
+  @media screen and (min-width: 64em) and (min-width: 64em){
   .large-expand{
     -webkit-box-flex:1;
     -webkit-flex:1 1 0px;
         -ms-flex:1 1 0px;
             flex:1 1 0px; } }
-
-@media print{
+  @media print{
   *{
     background:transparent !important;
     color:black !important;
@@ -2857,50 +2887,40 @@ select{
   h2,
   h3{
     page-break-after:avoid; } }
-
-@media screen and (min-width: 0\0){
+  @media screen and (min-width: 0\0){
   select{
     background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg=="); } }
-
-@media screen and (max-width: 39.9375em){
+  @media screen and (max-width: 39.9375em){
   .hide-for-small-only{
     display:none !important; }
   .show-for-medium{
     display:none !important; } }
-
-@media screen and (max-width: 0em), screen and (min-width: 40em){
+  @media screen and (max-width: 0em), screen and (min-width: 40em){
   .show-for-small-only{
     display:none !important; } }
-
-@media screen and (min-width: 40em) and (max-width: 63.9375em){
+  @media screen and (min-width: 40em) and (max-width: 63.9375em){
   .hide-for-medium-only{
     display:none !important; } }
-
-@media screen and (max-width: 39.9375em), screen and (min-width: 64em){
+  @media screen and (max-width: 39.9375em), screen and (min-width: 64em){
   .show-for-medium-only{
     display:none !important; } }
-
-@media screen and (max-width: 63.9375em){
+  @media screen and (max-width: 63.9375em){
   .show-for-large{
     display:none !important; } }
-
-@media screen and (min-width: 64em) and (max-width: 74.9375em){
+  @media screen and (min-width: 64em) and (max-width: 74.9375em){
   .hide-for-large-only{
     display:none !important; } }
-
-@media screen and (max-width: 63.9375em), screen and (min-width: 75em){
+  @media screen and (max-width: 63.9375em), screen and (min-width: 75em){
   .show-for-large-only{
     display:none !important; } }
-
-@media screen and (orientation: landscape){
+  @media screen and (orientation: landscape){
   .show-for-landscape,
     .hide-for-portrait{
     display:block !important; }
   .hide-for-landscape,
     .show-for-portrait{
     display:none !important; } }
-
-@media screen and (orientation: portrait){
+  @media screen and (orientation: portrait){
   .show-for-landscape,
     .hide-for-portrait{
     display:none !important; }
