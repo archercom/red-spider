@@ -73,7 +73,6 @@ p {
 @import "theme/links";
 @import "theme/misc";
 
-.global-header,
 .main,
 .global-footer {
   border: rem-calc(10) solid $white;
@@ -85,20 +84,15 @@ p {
   }
 }
 
-.global-header {
-  border-bottom: none;
-}
-
 .global-footer {
   border-top: none;
 }
 
 .main {
-  border-top: none;
   border-bottom: none;
   position: relative;
   z-index: 10;
-  background-color: $snow;
+  background-color: $vapor;
 }
 
 .next-block {
@@ -115,7 +109,6 @@ p {
     color: inherit;
     font-weight: $extra-bold;
     border-top: rem-calc(4) solid $base;
-    // margin-top: rem-calc(10);
   }
 
   @include breakpoint(medium) {
@@ -125,5 +118,4 @@ p {
 
 .circle {
   @include circle(rem-calc(40), $base);
-  // margin: rem-calc(10) auto;
 }
