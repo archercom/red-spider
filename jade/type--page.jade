@@ -15,10 +15,19 @@ html(lang="en").no-js
 
       main#main.main
         block content
-          .row.page-section
-            .columns.small-12
-              h1 Page Title
-              p The most basic of pages. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora soluta error officiis, dolor facere quam deserunt voluptatum esse adipisci, odio, repellat provident nobis? Delectus eveniet doloribus adipisci asperiores sed rerum.
+          header.page-header
+            .row
+              .columns.small-12
+                h1.page-title Page Title
+          .page-content
+            .row
+              .columns.small-12.medium-6
+                .box.overview-box
+                  p.page-subtitle The <br/> Essence <br/> of Greatness
+                  p With an in-house team of industry experts, we are able to create work that far exceeds client expectations. We take ourselves seriously while making creative and unforgettable work. Each of our departments works closely together to make sure every project is executed to perfection.
+              .columns.small-12.medium-6
+                figure.img-1
+                  img(src="images/freedom.jpg", alt="", width="250", height="250")
 
       include inc/global-footer.jade
     include inc/scripts.jade
