@@ -3,7 +3,8 @@ html(lang="en").no-js
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    title Page Title | Archer
+    block title
+      title Page Title | Archer
     meta(name="description", content="Archer 2.0, website for 2016")
     include inc/head.jade
 
@@ -13,10 +14,11 @@ html(lang="en").no-js
       include inc/global-header.jade
 
       main#main.main
-        .row.page-section
-          .columns.small-12
-            h1 Page Title
-            p The most basic of pages. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora soluta error officiis, dolor facere quam deserunt voluptatum esse adipisci, odio, repellat provident nobis? Delectus eveniet doloribus adipisci asperiores sed rerum.
+        block content
+          .row.page-section
+            .columns.small-12
+              h1 Page Title
+              p The most basic of pages. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora soluta error officiis, dolor facere quam deserunt voluptatum esse adipisci, odio, repellat provident nobis? Delectus eveniet doloribus adipisci asperiores sed rerum.
 
       include inc/global-footer.jade
     include inc/scripts.jade

@@ -1,24 +1,12 @@
-doctype html
-html(lang="en").no-js
-  head
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    title Colophon | Archer
-    meta(name="description", content="Archer 2.0, website for 2016")
-    include ../inc/head.jade
+extends ../type--page.jade
 
-  body
-    a(href="#main").show-for-sr Skip to main content
-    #container.container
-      include ../inc/global-header.jade
+block title
+  title Colophon | Archer
 
-      main#main.main
-        .row.page-section
-          .columns.small-12
-            h1 Colophon
-            p This site was made with the following tools:
-            h2 Design
-            h2 Development
-
-      include ../inc/global-footer.jade
-    include ../inc/scripts.jade
+block content
+  .row.page-section
+    .columns.small-12
+      h1 Colophon
+      p This site was made with the following tools:
+      h2 Design
+      h2 Development

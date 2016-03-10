@@ -1,37 +1,25 @@
-doctype html
-html(lang="en").no-js
-  head
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    title Article Title | Archer
-    meta(name="description", content="Archer 2.0, website for 2016")
-    include inc/head.jade
+extends type--page.jade
 
-  body
-    a(href="#main").show-for-sr Skip to main content
-    #container.container
-      include inc/global-header.jade
+block title
+  title Article Title | Archer
 
-      main#main.main
-        .row.page-section
-          .columns.small-12
-            article.type-article
-              .thick-page-section
-                h1 Article Title
-                strong Author Name
-                br
-                span February 2, 2016
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat tempore, nulla, earum officia molestias inventore dolorum sunt iste quae, asperiores praesentium blanditiis quaerat alias expedita aliquid fugiat consequatur recusandae eos.
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit quod vitae voluptates temporibus laborum quam, qui atque. Voluptatum veniam, dolor eos ut harum. Consequuntur saepe beatae ipsam hic, molestias odit.
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iure quaerat molestias suscipit ab dignissimos, non officia quia ipsam, praesentium doloremque vel dolorum sit quas deserunt. Assumenda illum, debitis commodi.
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste in earum suscipit quia accusamus incidunt. Perferendis culpa voluptatum ad adipisci, error cum asperiores sit at in a laboriosam incidunt blanditiis?
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis eligendi, molestias nesciunt odit explicabo, quisquam corrupti repellat, sint repellendus aliquid maiores ullam tempore ex tenetur voluptatum? Vitae laborum, quibusdam praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, libero. Quod quam, suscipit rem consequuntur maiores consectetur facilis. Dolore animi atque laboriosam assumenda nam tenetur quidem non est corrupti cum.
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eaque non autem esse animi repellendus, pariatur eius, dolore repellat, aliquam qui minus provident commodi eum. Beatae veniam accusamus tempore impedit.
-            .thick-page-section
-              hr
-              .clearfix
-                a(href="type--article.html").float-left Previous Article Title
-                a(href="type--article.html").float-right Next Article Title
-
-      include inc/global-footer.jade
-    include inc/scripts.jade
+block content
+  .row.page-section
+    .columns.small-12
+      article.type-article
+        .thick-page-section
+          h1 Article Title
+          strong Author Name
+          br
+          span February 2, 2016
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat tempore, nulla, earum officia molestias inventore dolorum sunt iste quae, asperiores praesentium blanditiis quaerat alias expedita aliquid fugiat consequatur recusandae eos.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit quod vitae voluptates temporibus laborum quam, qui atque. Voluptatum veniam, dolor eos ut harum. Consequuntur saepe beatae ipsam hic, molestias odit.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iure quaerat molestias suscipit ab dignissimos, non officia quia ipsam, praesentium doloremque vel dolorum sit quas deserunt. Assumenda illum, debitis commodi.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste in earum suscipit quia accusamus incidunt. Perferendis culpa voluptatum ad adipisci, error cum asperiores sit at in a laboriosam incidunt blanditiis?
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis eligendi, molestias nesciunt odit explicabo, quisquam corrupti repellat, sint repellendus aliquid maiores ullam tempore ex tenetur voluptatum? Vitae laborum, quibusdam praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, libero. Quod quam, suscipit rem consequuntur maiores consectetur facilis. Dolore animi atque laboriosam assumenda nam tenetur quidem non est corrupti cum.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eaque non autem esse animi repellendus, pariatur eius, dolore repellat, aliquam qui minus provident commodi eum. Beatae veniam accusamus tempore impedit.
+      .thick-page-section
+        hr
+        .clearfix
+          a(href="type--article.html").float-left Previous Article Title
+          a(href="type--article.html").float-right Next Article Title

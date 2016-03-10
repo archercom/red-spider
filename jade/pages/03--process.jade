@@ -1,72 +1,59 @@
-doctype html
-html(lang="en").no-js
-  head
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    title Process | Archer
-    meta(name="description", content="Archer 2.0, website for 2016")
-    include ../inc/head.jade
+extends ../type--page.jade
 
-  body
-    a(href="#main").show-for-sr Skip to main content
-    #container.container
-      include ../inc/global-header.jade
+block title
+  title Process | Archer
 
-      main#main.main
-        .row.page-section
-          .columns.small-12
-            .thick-page-section.medium-8.large-6
-              h1 Process
-              p The most basic of pages. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora soluta error officiis, dolor facere quam deserunt voluptatum esse adipisci, odio, repellat provident nobis? Delectus eveniet doloribus adipisci asperiores sed rerum.
-            .thick-page-section.medium-8.large-6
-              strong Step 1.
-              h2 Discover
-              p Atque dolores eveniet autem, excepturi saepe maxime necessitatibus? Quasi similique praesentium, molestiae, qui nesciunt nihil laudantium, porro laboriosam facilis alias, impedit aperiam.
-            .thick-page-section.medium-8.large-6
-              strong Step 2.
-              h2 Strategize
-              p Atque dolores eveniet autem, excepturi saepe maxime necessitatibus? Quasi similique praesentium, molestiae, qui nesciunt nihil laudantium, porro laboriosam facilis alias, impedit aperiam.
-            .thick-page-section.medium-8.large-6
-              strong Step 3.
-              h2 Create
-              p Atque dolores eveniet autem, excepturi saepe maxime necessitatibus? Quasi similique praesentium, molestiae, qui nesciunt nihil laudantium, porro laboriosam facilis alias, impedit aperiam.
-            .thick-page-section.medium-8.large-6
-              strong Step 4.
-              h2 Implement
-              p Atque dolores eveniet autem, excepturi saepe maxime necessitatibus? Quasi similique praesentium, molestiae, qui nesciunt nihil laudantium, porro laboriosam facilis alias, impedit aperiam.
-            .thick-page-section.medium-8.large-6
-              strong Step 5.
-              h2 Analyze
-              p Atque dolores eveniet autem, excepturi saepe maxime necessitatibus? Quasi similique praesentium, molestiae, qui nesciunt nihil laudantium, porro laboriosam facilis alias, impedit aperiam.
-            .thick-page-section.medium-8.large-6
-              strong Step 6.
-              h2 Continue
-              p Atque dolores eveniet autem, excepturi saepe maxime necessitatibus? Quasi similique praesentium, molestiae, qui nesciunt nihil laudantium, porro laboriosam facilis alias, impedit aperiam.
+block content
+  .row.page-section
+    .columns.small-12
+      .thick-page-section.medium-8.large-6
+        h1 Process
+        p The most basic of pages. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora soluta error officiis, dolor facere quam deserunt voluptatum esse adipisci, odio, repellat provident nobis? Delectus eveniet doloribus adipisci asperiores sed rerum.
+      .thick-page-section.medium-8.large-6
+        strong Step 1.
+        h2 Discover
+        p Atque dolores eveniet autem, excepturi saepe maxime necessitatibus? Quasi similique praesentium, molestiae, qui nesciunt nihil laudantium, porro laboriosam facilis alias, impedit aperiam.
+      .thick-page-section.medium-8.large-6
+        strong Step 2.
+        h2 Strategize
+        p Atque dolores eveniet autem, excepturi saepe maxime necessitatibus? Quasi similique praesentium, molestiae, qui nesciunt nihil laudantium, porro laboriosam facilis alias, impedit aperiam.
+      .thick-page-section.medium-8.large-6
+        strong Step 3.
+        h2 Create
+        p Atque dolores eveniet autem, excepturi saepe maxime necessitatibus? Quasi similique praesentium, molestiae, qui nesciunt nihil laudantium, porro laboriosam facilis alias, impedit aperiam.
+      .thick-page-section.medium-8.large-6
+        strong Step 4.
+        h2 Implement
+        p Atque dolores eveniet autem, excepturi saepe maxime necessitatibus? Quasi similique praesentium, molestiae, qui nesciunt nihil laudantium, porro laboriosam facilis alias, impedit aperiam.
+      .thick-page-section.medium-8.large-6
+        strong Step 5.
+        h2 Analyze
+        p Atque dolores eveniet autem, excepturi saepe maxime necessitatibus? Quasi similique praesentium, molestiae, qui nesciunt nihil laudantium, porro laboriosam facilis alias, impedit aperiam.
+      .thick-page-section.medium-8.large-6
+        strong Step 6.
+        h2 Continue
+        p Atque dolores eveniet autem, excepturi saepe maxime necessitatibus? Quasi similique praesentium, molestiae, qui nesciunt nihil laudantium, porro laboriosam facilis alias, impedit aperiam.
 
-            .thick-page-section
-              hr
-              h2.show-for-sr Case Studies
-              p Check out the results of our process
-              ul.no-bullet.no-margin.row.small-up-1.medium-up-3
-                li.column
-                  a(href="type--case-study.html")
-                    h3 Trevett Cristo
-                      br
-                      small Refreshing the brand
-                    p Nunc interdum lacus sit amet orci.
-                li.column
-                  a(href="type--case-study.html")
-                    h3 The Strathallan
-                      br
-                      small New rooftop, new website
-                    p Etiam vitae tortor. Nunc sed turpis.
-                li.column
-                  a(href="type--case-study.html")
-                    h3 Lyons National Bank
-                      br
-                      small Updating a bank's web presence
-                    p Sed aliquam ultrices mauris.
-
-
-      include ../inc/global-footer.jade
-    include ../inc/scripts.jade
+      .thick-page-section
+        hr
+        h2.show-for-sr Case Studies
+        p Check out the results of our process
+        ul.no-bullet.no-margin.row.small-up-1.medium-up-3
+          li.column
+            a(href="type--case-study.html")
+              h3 Trevett Cristo
+                br
+                small Refreshing the brand
+              p Nunc interdum lacus sit amet orci.
+          li.column
+            a(href="type--case-study.html")
+              h3 The Strathallan
+                br
+                small New rooftop, new website
+              p Etiam vitae tortor. Nunc sed turpis.
+          li.column
+            a(href="type--case-study.html")
+              h3 Lyons National Bank
+                br
+                small Updating a bank's web presence
+              p Sed aliquam ultrices mauris.

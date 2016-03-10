@@ -1,54 +1,41 @@
-doctype html
-html(lang="en").no-js
-  head
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    title Contact | Archer
-    meta(name="description", content="Archer 2.0, website for 2016")
-    include ../inc/head.jade
+extends ../type--page.jade
 
-  body
-    a(href="#main").show-for-sr Skip to main content
-    #container.container
-      include ../inc/global-header.jade
+block title
+  title Contact | Archer
 
-      main#main.main
-        .row.page-section
-          .columns.small-12
-            .thick-page-section.medium-8.large-6
-              h1 Contact
-              p Blurb about what to expect working with us. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              p Looking to join the team? Whether you're looking for a full-time gig, co-op, or internship, check out our <a href="#">job openings</a>
+block content
+  .row.page-section
+    .columns.small-12
+      .thick-page-section.medium-8.large-6
+        h1 Contact
+        p Blurb about what to expect working with us. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        p Looking to join the team? Whether you're looking for a full-time gig, co-op, or internship, check out our <a href="#">job openings</a>
 
-            .thick-page-section.medium-8.large-6
-              p 252 Alexander Street, <br /> Rochester, New York, <br /> United States, Earth
-              p (585) 867-5309
-              form(data-abide, novalidate)
-                .alert.callout(data-abide-error, style="display: none;")
-                  p There are some errors in your form.
-                .row
-                  .small-12.columns
-                    label
-                      span Name
-                      input(type="text", placeholder="Firstname Lastname", required)
-                      span.form-error We need a name. Give us a name.
-                .row
-                  .small-12.columns
-                    label
-                      span Email
-                      input(type="text", placeholder="name@email.com", required, pattern="email")
-                      span.form-error We need a valid email to be able to contact you.
-                .row
-                  .small-12.columns
-                    label
-                      span Message
-                      textarea(placeholder="Hi!", required)
-                .row
-                  .medium-6.columns
-                    button.button(type="reset", value="Reset") Reset
-                  .medium-6.columns
-                    button.button.expanded(type="submit", value="Submit") Submit
-
-
-      include ../inc/global-footer.jade
-    include ../inc/scripts.jade
+      .thick-page-section.medium-8.large-6
+        p 252 Alexander Street, <br /> Rochester, New York, <br /> United States, Earth
+        p (585) 867-5309
+        form(data-abide, novalidate)
+          .alert.callout(data-abide-error, style="display: none;")
+            p There are some errors in your form.
+          .row
+            .small-12.columns
+              label
+                span Name
+                input(type="text", placeholder="Firstname Lastname", required)
+                span.form-error We need a name. Give us a name.
+          .row
+            .small-12.columns
+              label
+                span Email
+                input(type="text", placeholder="name@email.com", required, pattern="email")
+                span.form-error We need a valid email to be able to contact you.
+          .row
+            .small-12.columns
+              label
+                span Message
+                textarea(placeholder="Hi!", required)
+          .row
+            .medium-6.columns
+              button.button(type="reset", value="Reset") Reset
+            .medium-6.columns
+              button.button.expanded(type="submit", value="Submit") Submit

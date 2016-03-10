@@ -1,48 +1,35 @@
-doctype html
-html(lang="en").no-js
-  head
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    title Archer
-    meta(name="description", content="Archer 2.0, website for 2016")
-    include inc/head.jade
+extends type--page.jade
 
-  body
-    a(href="#main").show-for-sr Skip to main content
-    #container.container
-      include inc/global-header.jade
+block title
+  title Archer
 
-      main#main.main
-        .row.page-section
-          .columns.small-12
-            .thick-page-section.text-center
-              h1#marquee.marquee Your <span id="animated-text">local</span> agency
-            .row.text-center
-              .columns.small-12.page-section
-                h2 stuff we made
-                p apply your eyeballs
-                a(href="01--showcase.html").effect-1 See our work
-              .columns.small-12.page-section
-                h2 what we do
-                p we make you awesome
-                a(href="02--services.html").effect-1 More about our services
-              .columns.small-12.page-section
-                h2 how we work
-                p or how we make awesome things
-                a(href="03--process.html").effect-1 Learn how we work
-              .columns.small-12.page-section
-                h2 get to know us
-                p how we do the things
-                a(href="04--agency.html").effect-1 About the team
-              .columns.small-12.page-section
-                h2 get in touch
-                p better than being out of touch
-                a(href="05--contact.html").effect-1 Buh-bum Tiss
-            .page-section
-              h2 articles were wrote
-              p letters in words in sentences in paragraphs
-              a(href="06--range.html").effect-1 View all articles
-
-
-      include inc/global-footer.jade
-    include inc/scripts.jade
+block content
+  .row.page-section
+    .columns.small-12
+      .thick-page-section.text-center
+        h1#marquee.marquee Your <span id="animated-text">local</span> agency
+      .row.text-center
+        .columns.small-12.page-section
+          h2 stuff we made
+          p apply your eyeballs
+          a(href="01--showcase.html").effect-1 See our work
+        .columns.small-12.page-section
+          h2 what we do
+          p we make you awesome
+          a(href="02--services.html").effect-1 More about our services
+        .columns.small-12.page-section
+          h2 how we work
+          p or how we make awesome things
+          a(href="03--process.html").effect-1 Learn how we work
+        .columns.small-12.page-section
+          h2 get to know us
+          p how we do the things
+          a(href="04--agency.html").effect-1 About the team
+        .columns.small-12.page-section
+          h2 get in touch
+          p better than being out of touch
+          a(href="05--contact.html").effect-1 Buh-bum Tiss
+      .page-section
+        h2 articles were wrote
+        p letters in words in sentences in paragraphs
+        a(href="06--range.html").effect-1 View all articles
