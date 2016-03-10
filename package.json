@@ -51,7 +51,7 @@
   "dependencies": {
     "browserify-shim": "^3.8.12",
     "cheet.js": "^0.3.3",
-    "foundation-sites": "^6.1.2",
+    "foundation-sites": "^6.2.0",
     "hide-on-scroll": "^0.1.0",
     "jquery": "^2.2.0",
     "scrollmonitor": "^1.0.12",
