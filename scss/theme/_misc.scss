@@ -1,0 +1,166 @@
+.main {
+  position: relative;
+  z-index: 10;
+  background-color: $white;
+}
+
+
+.test-1 {
+  background-color: $red;
+  color: $white;
+  padding: 10% 5%;
+  h2 {
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: rem-calc(60);
+  }
+  small {
+    display: block;
+    margin-top: 30%;
+  }
+}
+
+.test-3 {
+  h2 {
+    margin-top: rem-calc(60);
+    color: $red;
+  }
+  img {
+    margin-bottom: rem-calc(20);
+  }
+  strong {
+    display: block;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: rem-calc(10);
+  }
+}
+
+
+
+.pos-rel {
+  position: relative;
+}
+
+.two-cols {
+  @include breakpoint(medium) {
+    -webkit-column-count: 2;
+  }
+}
+
+.thick-row {
+  @include page-section(50);
+  @include breakpoint(medium) {
+    @include page-section(70);
+  }
+  @include breakpoint(large) {
+    @include page-section(90);
+  }
+}
+
+
+
+// cursor effect
+// ----------------------------------------
+.typed-cursor {
+  animation-name: pulse;
+  animation-duration: 0.9s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  &.off {
+    animation-iteration-count: 1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.page-header {
+  padding-top: rem-calc(240);
+  padding-bottom: rem-calc(100);
+  background-color: $gainsboro;
+  + .page-content {
+    margin-top: rem-calc(-80);
+  }
+  @include breakpoint(medium) {
+    padding-bottom: rem-calc(60);
+  }
+}
+
+.box {
+  border: 3px solid;
+  padding: rem-calc(40);
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.client-list {
+  list-style: none;
+  margin: rem-calc(50 0);
+  text-align: center;
+  li {
+    border: 3px solid;
+    margin: rem-calc(30 0);
+  }
+  a {
+    display: block;
+    padding: rem-calc(30);
+  }
+  h3 {
+    margin: 0;
+  }
+  @include breakpoint(medium) {
+    margin: rem-calc(80 0);
+    li {
+      margin: rem-calc(50 0);
+    }
+    a {
+      padding: rem-calc(50 30);
+    }
+  }
+  @include breakpoint(large) {
+    li {
+      margin: rem-calc(80 0);
+    }
+    a {
+      padding: rem-calc(80 30);
+    }
+  }
+}
+
+.img-1 {
+  text-align: center;
+  @include breakpoint(medium) {
+    margin-top: 50%;
+    margin-bottom: 10%;
+  }
+  @include breakpoint(large) {
+    margin-top: 25%;
+  }
+}
+
+.showcase-block {
+  color: inherit;
+  display: block;
+  border: 3px solid;
+  padding: rem-calc(20);
+  p:last-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    color: inherit;
+  }
+}

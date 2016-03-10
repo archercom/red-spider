@@ -1,0 +1,73 @@
+.marquee {
+  text-transform: none;
+  font-size: rem-calc(40);
+  @include breakpoint(medium) {
+    font-size: rem-calc(64);
+  }
+}
+
+.header-1 {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: rem-calc(40);
+  padding: rem-calc(40 0);
+  margin: 0;
+  span {
+    display: block;
+  }
+  @include breakpoint(medium) {
+    font-size: rem-calc(60);
+    padding: rem-calc(120 0);
+  }
+  @include breakpoint(large) {
+    font-size: rem-calc(100);
+    padding: rem-calc(200 0);
+  }
+}
+
+
+.page-title {
+  text-transform: uppercase;
+  font-size: rem-calc(50);
+  line-height: 1;
+  @include breakpoint(medium) {
+    font-size: rem-calc(100);
+    margin-bottom: rem-calc(30);
+    &.v2 {
+      font-size: rem-calc(60);
+    }
+  }
+}
+
+
+.page-subtitle {
+  font-size: rem-calc(40);
+  font-weight: $header-font-weight;
+  line-height: 1;
+}
+
+
+
+.testimonial {
+  p {
+    line-height: 1.4;
+    font-style: italic;
+    font-size: rem-calc(20);
+  }
+  @include breakpoint(medium) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -100%;
+    p {
+      font-size: rem-calc(26);
+    }
+  }
+  @include breakpoint(large) {
+    p {
+      font-size: rem-calc(32);
+    }
+  }
+}

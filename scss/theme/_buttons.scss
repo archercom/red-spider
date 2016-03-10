@@ -1,0 +1,10 @@
+.round-button {
+  font-weight: $extra-bold;
+  background-color: $monsoon;
+  color: $white;
+  padding: rem-calc(10 25);
+  border-radius: rem-calc(20);
+  &:hover {
+    color: $white;
+  }
+}
