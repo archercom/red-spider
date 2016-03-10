@@ -7,6 +7,12 @@
   right: 0;
   z-index: 0;
   backface-visibility: hidden;
+  padding-top: rem-calc(20);
+  padding-bottom: rem-calc(10);
+  @include breakpoint(medium) {
+    padding-top: rem-calc(40);
+    padding-bottom: rem-calc(20);
+  }
 }
 
 

@@ -72,3 +72,31 @@ p {
 @import "theme/typography";
 @import "theme/links";
 @import "theme/misc";
+
+.global-header,
+.main,
+.global-footer {
+  border: rem-calc(10) solid $white;
+  @include breakpoint(medium) {
+    border-width: rem-calc(15);
+  }
+  @include breakpoint(large) {
+    border-width: rem-calc(20);
+  }
+}
+
+.global-header {
+  border-bottom: none;
+}
+
+.global-footer {
+  border-top: none;
+}
+
+.main {
+  border-top: none;
+  border-bottom: none;
+  position: relative;
+  z-index: 10;
+  background-color: $snow;
+}
