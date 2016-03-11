@@ -4,6 +4,9 @@
   left: 0;
   z-index: 100;
   backface-visibility: hidden;
+  width: 50%;
+  border-top: $offset-small solid $white;
+  border-left: $offset-small solid $white;
   &:after {
     content: "\0a0";
     display: inline-block;
@@ -18,34 +21,32 @@
     transition: transform 0.6s ease;
     transform: translateX(-100%) translateY(-75%);
   }
-  &.detached.hidden {
+  &.detached {
     &:after {
       transform: translateX(-100%) translateY(-75%) rotate(20deg);
     }
   }
 
   @include breakpoint(medium) {
+    width: 25%;
+    border-width: $offset-medium;
     &:after {
       transform: translateX(-100%) translateY(-25%);
     }
-    &.detached.hidden {
+    &.detached {
       &:after {
         transform: translateX(-100%) translateY(-25%) rotate(8deg);
       }
     }
+  }
 
+  @include breakpoint(large) {
+    border-width: $offset-large;
   }
 }
 
-$h1-offset-small: rem-calc(10);
-$h1-offset-medium: rem-calc(15);
-$h1-offset-large: rem-calc(20);
 
 .h1 {
-  margin-left: $h1-offset-small;
-  margin-top: $h1-offset-small;
-  padding-left: $h1-offset-small;
-  padding-top: $h1-offset-small;
   font-size: rem-calc(24);
   font-weight: bold;
   margin-bottom: 0;
@@ -54,19 +55,5 @@ $h1-offset-large: rem-calc(20);
   a {
     display: inline-block;
     color: inherit;
-  }
-
-  @include breakpoint(medium) {
-    margin-left: $h1-offset-medium;
-    margin-top: $h1-offset-medium;
-    padding-left: $h1-offset-medium;
-    padding-top: $h1-offset-medium;
-  }
-
-  @include breakpoint(large) {
-    margin-left: $h1-offset-large;
-    margin-top: $h1-offset-large;
-    padding-left: $h1-offset-large;
-    padding-top: $h1-offset-large;
   }
 }

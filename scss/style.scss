@@ -66,6 +66,11 @@ p {
   }
 }
 
+// misc
+$offset-small: rem-calc(10);
+$offset-medium: rem-calc(15);
+$offset-large: rem-calc(20);
+
 @import "theme/header";
 @import "theme/nav";
 @import "theme/footer";
@@ -75,12 +80,12 @@ p {
 
 .main,
 .global-footer {
-  border: rem-calc(10) solid $white;
+  border: $offset-small solid $white;
   @include breakpoint(medium) {
-    border-width: rem-calc(15);
+    border-width: $offset-medium;
   }
   @include breakpoint(large) {
-    border-width: rem-calc(20);
+    border-width: $offset-large;
   }
 }
 
