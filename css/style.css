@@ -1893,7 +1893,7 @@ select{
   padding-top:15rem;
   padding-bottom:6.25rem;
   background-color:#DDDDDD; }
-  .page-header + .page-content{
+  .page-header + div{
     margin-top:-5rem; }
 
 .box{

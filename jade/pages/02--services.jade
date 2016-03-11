@@ -3,145 +3,142 @@ extends ../type--page.jade
 block title
   title Services | Archer
 
+block pagetitle
+  h1.page-title Services
+
+block overviewcolumn1
+  .box
+    p.page-subtitle The <br/> Natural <br/> Way to Market
+    p We o er a range of traditional and internet marketing services. From branding to advertising to fresh website design, we have you covered.
+
+block overviewcolumn2
+  blockquote.img-1
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elit metus, aliquet eu sapien sit amet, semper luctus mi. Cras gravida, velit.
+    cite Realclient Name, Company
+
 block content
-  header.page-header
-    .row
-      .columns.small-12
-        h1.page-title Services
-  .page-content
-    .row
-      .columns.small-12.medium-6
-        .box.overview-box
-          p.page-subtitle The <br/> Natural <br/> Way to Market
-          p We o er a range of traditional and internet marketing services. From branding to advertising to fresh website design, we have you covered.
-      .columns.small-12.medium-6
-        blockquote.img-1
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elit metus, aliquet eu sapien sit amet, semper luctus mi. Cras gravida, velit.
-          cite Realclient Name, Company
+  .row.page-section
+    .columns.small-12
+      .thick-page-section
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        nav
+          h2.show-for-sr Page Nav
+          ul.menu.vertical.medium-horizontal
+            li
+              a(href="#strategy", data-smooth-scroll) Strategy
+            li
+              a(href="#design-ux", data-smooth-scroll) Design &amp; UX
+            li
+              a(href="#technology", data-smooth-scroll) Technology
+            li
+              a(href="#data-analytics", data-smooth-scroll) Data &amp; Analytics
+            li
+              a(href="#promotion", data-smooth-scroll) Promotion
+
+      #strategy.thick-page-section.medium-8.large-6
+        h2 Strategy
+        ul.no-bullet.row.small-up-2.medium-up-3
+          li.column Odit recusandae
+          li.column Voluptates animi
+          li.column Corrupti
+          li.column Blanditiis
+          li.column Nisi
+          li.column Velit
+          li.column Soluta earum
+          li.column Temporibus illo
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta architecto debitis maxime mollitia porro adipisci quae temporibus perspiciatis eligendi aliquam illum, placeat tempore, ducimus unde veniam eius, earum fuga ex!
+        h3 Featured Work
+        ul.no-bullet
+          li
+            a(href="type--case-study.html") Case Study Title
+          li
+            a(href="type--case-study.html") Case Study Title
+        h3 Related Articles
+        ul.no-bullet
+          li
+            a(href="type--article.html") Article Title
+          li
+            a(href="type--article.html") Article Title
+          li
+            a(href="type--article.html") Article Title
 
 
-    .row.page-section
-      .columns.small-12
-        .thick-page-section
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          nav
-            h2.show-for-sr Page Nav
-            ul.menu.vertical.medium-horizontal
-              li
-                a(href="#strategy", data-smooth-scroll) Strategy
-              li
-                a(href="#design-ux", data-smooth-scroll) Design &amp; UX
-              li
-                a(href="#technology", data-smooth-scroll) Technology
-              li
-                a(href="#data-analytics", data-smooth-scroll) Data &amp; Analytics
-              li
-                a(href="#promotion", data-smooth-scroll) Promotion
-
-        #strategy.thick-page-section.medium-8.large-6
-          h2 Strategy
-          ul.no-bullet.row.small-up-2.medium-up-3
-            li.column Odit recusandae
-            li.column Voluptates animi
-            li.column Corrupti
-            li.column Blanditiis
-            li.column Nisi
-            li.column Velit
-            li.column Soluta earum
-            li.column Temporibus illo
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta architecto debitis maxime mollitia porro adipisci quae temporibus perspiciatis eligendi aliquam illum, placeat tempore, ducimus unde veniam eius, earum fuga ex!
-          h3 Featured Work
-          ul.no-bullet
-            li
-              a(href="type--case-study.html") Case Study Title
-            li
-              a(href="type--case-study.html") Case Study Title
-          h3 Related Articles
-          ul.no-bullet
-            li
-              a(href="type--article.html") Article Title
-            li
-              a(href="type--article.html") Article Title
-            li
-              a(href="type--article.html") Article Title
+      #design-ux.thick-page-section.medium-8.large-6
+        h2 Design &amp; UX
+        ul.no-bullet.row.small-up-2.medium-up-3
+          li.column Odit recusandae
+          li.column Voluptates animi
+          li.column Corrupti
+          li.column Temporibus illo
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsa amet pariatur ratione magnam nam aperiam soluta, beatae aliquid quam laborum doloribus consequatur, sunt voluptatum blanditiis ipsum facere esse deleniti!
+        h3 Featured Work
+        ul.no-bullet
+          li
+            a(href="type--case-study.html") Case Study Title
+        h3 Related Articles
+        ul.no-bullet
+          li
+            a(href="type--article.html") Article Title
 
 
-        #design-ux.thick-page-section.medium-8.large-6
-          h2 Design &amp; UX
-          ul.no-bullet.row.small-up-2.medium-up-3
-            li.column Odit recusandae
-            li.column Voluptates animi
-            li.column Corrupti
-            li.column Temporibus illo
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsa amet pariatur ratione magnam nam aperiam soluta, beatae aliquid quam laborum doloribus consequatur, sunt voluptatum blanditiis ipsum facere esse deleniti!
-          h3 Featured Work
-          ul.no-bullet
-            li
-              a(href="type--case-study.html") Case Study Title
-          h3 Related Articles
-          ul.no-bullet
-            li
-              a(href="type--article.html") Article Title
+      #technology.thick-page-section.medium-8.large-6
+        h2 Technology
+        ul.no-bullet.row.small-up-2.medium-up-3
+          li.column Odit recusandae
+          li.column Voluptates animi
+          li.column Velit
+          li.column Soluta earum
+          li.column Temporibus illo
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsa amet pariatur ratione magnam nam aperiam soluta, beatae aliquid quam laborum doloribus consequatur, sunt voluptatum blanditiis ipsum facere esse deleniti!
+        h3 Featured Work
+        ul.no-bullet
+          li
+            a(href="type--case-study.html") Case Study Title
+        h3 Related Articles
+        ul.no-bullet
+          li
+            a(href="type--article.html") Article Title
 
 
-        #technology.thick-page-section.medium-8.large-6
-          h2 Technology
-          ul.no-bullet.row.small-up-2.medium-up-3
-            li.column Odit recusandae
-            li.column Voluptates animi
-            li.column Velit
-            li.column Soluta earum
-            li.column Temporibus illo
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsa amet pariatur ratione magnam nam aperiam soluta, beatae aliquid quam laborum doloribus consequatur, sunt voluptatum blanditiis ipsum facere esse deleniti!
-          h3 Featured Work
-          ul.no-bullet
-            li
-              a(href="type--case-study.html") Case Study Title
-          h3 Related Articles
-          ul.no-bullet
-            li
-              a(href="type--article.html") Article Title
+      #data-analytics.thick-page-section.medium-8.large-6
+        h2 Data &amp; Analytics
+        ul.no-bullet.row.small-up-2.medium-up-3
+          li.column Odit recusandae
+          li.column Voluptates animi
+          li.column Corrupti
+          li.column Soluta earum
+          li.column Temporibus illo
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsa amet pariatur ratione magnam nam aperiam soluta, beatae aliquid quam laborum doloribus consequatur, sunt voluptatum blanditiis ipsum facere esse deleniti!
+        h3 Featured Work
+        ul.no-bullet
+          li
+            a(href="type--case-study.html") Case Study Title
+        h3 Related Articles
+        ul.no-bullet
+          li
+            a(href="type--article.html") Article Title
 
 
-        #data-analytics.thick-page-section.medium-8.large-6
-          h2 Data &amp; Analytics
-          ul.no-bullet.row.small-up-2.medium-up-3
-            li.column Odit recusandae
-            li.column Voluptates animi
-            li.column Corrupti
-            li.column Soluta earum
-            li.column Temporibus illo
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsa amet pariatur ratione magnam nam aperiam soluta, beatae aliquid quam laborum doloribus consequatur, sunt voluptatum blanditiis ipsum facere esse deleniti!
-          h3 Featured Work
-          ul.no-bullet
-            li
-              a(href="type--case-study.html") Case Study Title
-          h3 Related Articles
-          ul.no-bullet
-            li
-              a(href="type--article.html") Article Title
-
-
-        #promotion.thick-page-section.medium-8.large-6
-          h2 Promotion
-          ul.no-bullet.row.small-up-2.medium-up-3
-            li.column Odit recusandae
-            li.column Voluptates animi
-            li.column Corrupti
-            li.column Blanditiis
-            li.column Nisi
-            li.column Velit
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio minima deleniti tempora aperiam accusamus, voluptatem, delectus! Reprehenderit sed maxime alias, sit totam neque. Quis est, a impedit perferendis sed minima!
-          h3 Featured Work
-          ul.no-bullet
-            li
-              a(href="type--case-study.html") Case Study Title
-          h3 Related Articles
-          ul.no-bullet
-            li
-              a(href="type--article.html") Article Title
-            li
-              a(href="type--article.html") Article Title
-            li
-              a(href="type--article.html") Article Title
+      #promotion.thick-page-section.medium-8.large-6
+        h2 Promotion
+        ul.no-bullet.row.small-up-2.medium-up-3
+          li.column Odit recusandae
+          li.column Voluptates animi
+          li.column Corrupti
+          li.column Blanditiis
+          li.column Nisi
+          li.column Velit
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio minima deleniti tempora aperiam accusamus, voluptatem, delectus! Reprehenderit sed maxime alias, sit totam neque. Quis est, a impedit perferendis sed minima!
+        h3 Featured Work
+        ul.no-bullet
+          li
+            a(href="type--case-study.html") Case Study Title
+        h3 Related Articles
+        ul.no-bullet
+          li
+            a(href="type--article.html") Article Title
+          li
+            a(href="type--article.html") Article Title
+          li
+            a(href="type--article.html") Article Title
 

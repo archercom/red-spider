@@ -15,20 +15,28 @@ html(lang="en").no-js
       include inc/global-nav.jade
 
       main#main.main
-        block content
+        block pageheader
           header.page-header
             .row
               .columns.small-12
-                h1.page-title Page Title
-          .page-content
+                block pagetitle
+                  h1.page-title Page Title
+
+        block pageoverview
+          .page-overview
             .row
               .columns.small-12.medium-6
-                .box.overview-box
-                  p.page-subtitle The <br/> Essence <br/> of Greatness
-                  p With an in-house team of industry experts, we are able to create work that far exceeds client expectations. We take ourselves seriously while making creative and unforgettable work. Each of our departments works closely together to make sure every project is executed to perfection.
+                block overviewcolumn1
+                  .box
+                    p.page-subtitle The <br/> Essence <br/> of Greatness
+                    p With an in-house team of industry experts, we are able to create work that far exceeds client expectations. We take ourselves seriously while making creative and unforgettable work. Each of our departments works closely together to make sure every project is executed to perfection.
               .columns.small-12.medium-6
-                figure.img-1
-                  img(src="images/freedom.jpg", alt="", width="250", height="250")
+                block overviewcolumn2
+                  figure.img-1
+                    img(src="images/freedom.jpg", alt="", width="250", height="250")
+
+        block content
+          p hi
         .base-bg
           .row.thick-row.align-center
             .columns.small-11.medium-10.large-9

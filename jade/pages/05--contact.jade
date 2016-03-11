@@ -3,39 +3,47 @@ extends ../type--page.jade
 block title
   title Contact | Archer
 
-block content
-  .row.page-section
-    .columns.small-12
-      .thick-page-section.medium-8.large-6
-        h1 Contact
-        p Blurb about what to expect working with us. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        p Looking to join the team? Whether you're looking for a full-time gig, co-op, or internship, check out our <a href="#">job openings</a>
+block pagetitle
+  h1.page-title Contact
 
-      .thick-page-section.medium-8.large-6
-        p 252 Alexander Street, <br /> Rochester, New York, <br /> United States, Earth
-        p (585) 867-5309
-        form(data-abide, novalidate)
-          .alert.callout(data-abide-error, style="display: none;")
-            p There are some errors in your form.
-          .row
-            .small-12.columns
-              label
-                span Name
-                input(type="text", placeholder="Firstname Lastname", required)
-                span.form-error We need a name. Give us a name.
-          .row
-            .small-12.columns
-              label
-                span Email
-                input(type="text", placeholder="name@email.com", required, pattern="email")
-                span.form-error We need a valid email to be able to contact you.
-          .row
-            .small-12.columns
-              label
-                span Message
-                textarea(placeholder="Hi!", required)
-          .row
-            .medium-6.columns
-              button.button(type="reset", value="Reset") Reset
-            .medium-6.columns
-              button.button.expanded(type="submit", value="Submit") Submit
+block pageoverview
+
+block content
+  .row
+    .columns.small-12.medium-6
+      .box.overview-box
+        p.page-subtitle Archer. <br/> It Just Makes Sense.
+        p If you like what you see, get in touch today!
+      .page-section
+        h2 Need more information? Let us contact you
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, tempora! Possimus facere debitis natus ex sapiente.
+      form(data-abide, novalidate).thick-margin-bottom
+        .alert.callout(data-abide-error, style="display: none;")
+          p There are some errors in your form.
+        .row
+          .small-12.columns
+            label
+              span Name
+              input(type="text", placeholder="Firstname Lastname", required)
+              span.form-error We need a name. Give us a name.
+        .row
+          .small-12.columns
+            label
+              span Email
+              input(type="text", placeholder="name@email.com", required, pattern="email")
+              span.form-error We need a valid email to be able to contact you.
+        .row
+          .small-12.columns
+            label
+              span Message
+              textarea(placeholder="Hi!", required)
+        .row.text-right
+          .columns
+            button.button.expanded(type="submit", value="Submit") Submit
+    .columns.small-12.medium-6
+      .box
+        h2 Looking to join the team?
+        p  Whether you're looking for a full-time gig, co-op, or internships lorem ipsum dolor set.
+        a(href="#").button Careers
+        br
+        a(href="#").button Internships

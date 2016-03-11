@@ -84,7 +84,7 @@
   padding-top: rem-calc(240);
   padding-bottom: rem-calc(100);
   background-color: $gainsboro;
-  + .page-content {
+  + div {
     margin-top: rem-calc(-80);
   }
   @include breakpoint(medium) {

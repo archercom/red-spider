@@ -3,14 +3,21 @@ extends ../type--page.jade
 block title
   title Agency | Archer
 
+block pagetitle
+  h1.page-title Agency
+
+block overviewcolumn1
+  .box
+    p.page-subtitle A brief about us.
+    p Quasi dignissimos hic, quidem accusantium culpa reprehenderit iste maiores nobis, doloremque minus sed.
+    p Based in Rochester, New York
+
+//- block overviewcolumn2
+
 block content
-  .row.page-section
+  .row
     .columns.small-12
-      .thick-page-section.medium-8.large-6
-        h1 Agency
-        p A brief about us. Quasi dignissimos hic, quidem accusantium culpa reprehenderit iste maiores nobis, doloremque minus sed.
-        p Based in Rochester, New York
-      .thick-page-section.medium-8.large-6
+      .medium-8.large-6
         h2 Work Culture
         p who we are
         p what we look for
@@ -22,7 +29,7 @@ block content
         h3 Trophy Cabinet
       .thick-page-section
         h2 The Team
-        ul.no-bullet.no-margin.row.small-up-1.medium-up-3.large-up-5
+        ul.no-bullet.no-margin.row.small-up-1.medium-up-3.large-up-4
           li.column
             a(href="type--profile-page.html")
               img(src="images/freedom.jpg", alt="")

@@ -3,43 +3,45 @@ extends ../type--page.jade
 block title
   title Showcase | Archer
 
+block pagetitle
+  h1.page-title Showcase
+
+block overviewcolumn1
+  .box
+    p.page-subtitle The <br/> Essence <br/> of Greatness
+    p With an in-house team of industry experts, we are able to create work that far exceeds client expectations. We take ourselves seriously while making creative and unforgettable work. Each of our departments works closely together to make sure every project is executed to perfection.
+
+block overviewcolumn2
+  figure.img-1
+    img(src="images/freedom.jpg", alt="", width="250", height="250")
+
 block content
-  header.page-header
-    .row
-      .columns.small-12
-        h1.page-title Showcase
-  .page-content
-    .row
-      .columns.small-12.medium-6
-        .box.overview-box
-          p.page-subtitle The <br/> Essence <br/> of Greatness
-          p With an in-house team of industry experts, we are able to create work that far exceeds client expectations. We take ourselves seriously while making creative and unforgettable work. Each of our departments works closely together to make sure every project is executed to perfection.
-      .columns.small-12.medium-6
-        figure.img-1
-          img(src="images/freedom.jpg", alt="", width="250", height="250")
-    .row
-      .columns.small-12.medium-6.pos-rel
-        blockquote.testimonial
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elit metus, aliquet eu sapien sit amet, semper luctus mi. Cras gravida, velit.
-          cite Realclient Name, Company
-      .columns.small-12.medium-6
-        p Phasellus eu nisl sit amet lorem posuere tincidunt ac non augue. Proin ex ipsum, dignissim non placerat et, ultricies vel mi. Nullam nisi ex, euismod nec tellus eu, condimentum ullamcorper ante.
-    .row
-      .columns.small-12
-        h2.show-for-sr Client List
-        ul.client-list
-          li
-            a(href="type--case-study.html")
-              h3 Lyons National Bank
-          li
-            a(href="type--case-study.html")
-              h3 The Bonadio Group
-          li
-            a(href="type--case-study.html")
-              h3 Trevett Cristo
-          li
-            a(href="type--case-study.html")
-              h3 The Strathallan
-          li
-            a(href="type--case-study.html")
-              h3 Gilda's Club of Rochester
+  .row
+    .columns.small-12.medium-6
+    .columns.small-12.medium-6
+  .row
+    .columns.small-12.medium-6.pos-rel
+      blockquote.testimonial
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elit metus, aliquet eu sapien sit amet, semper luctus mi. Cras gravida, velit.
+        cite Realclient Name, Company
+    .columns.small-12.medium-6
+      p Phasellus eu nisl sit amet lorem posuere tincidunt ac non augue. Proin ex ipsum, dignissim non placerat et, ultricies vel mi. Nullam nisi ex, euismod nec tellus eu, condimentum ullamcorper ante.
+  .row
+    .columns.small-12
+      h2.show-for-sr Client List
+      ul.client-list
+        li
+          a(href="type--case-study.html")
+            h3 Lyons National Bank
+        li
+          a(href="type--case-study.html")
+            h3 The Bonadio Group
+        li
+          a(href="type--case-study.html")
+            h3 Trevett Cristo
+        li
+          a(href="type--case-study.html")
+            h3 The Strathallan
+        li
+          a(href="type--case-study.html")
+            h3 Gilda's Club of Rochester
