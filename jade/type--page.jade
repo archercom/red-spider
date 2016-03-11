@@ -17,46 +17,33 @@ html(lang="en").no-js
       main#main.main
         block pageheader
           header.page-header
-            .row
-              .columns.small-12
+            .row.align-center
+              .columns.small-12.medium-11.large-10
                 block pagetitle
                   h1.page-title Page Title
 
         block pageoverview
           .page-overview
-            .row
-              .columns.small-12.medium-6
-                block overviewcolumn1
-                  .box
-                    p.page-subtitle The <br/> Essence <br/> of Greatness
-                    p With an in-house team of industry experts, we are able to create work that far exceeds client expectations. We take ourselves seriously while making creative and unforgettable work. Each of our departments works closely together to make sure every project is executed to perfection.
-              .columns.small-12.medium-6
-                block overviewcolumn2
-                  figure.img-1
-                    img(src="images/freedom.jpg", alt="", width="250", height="250")
+            .row.align-center
+              .columns.small-12.medium-11.large-10
+                .row
+                  .columns.small-12.medium-6
+                    block overviewcolumn1
+                      .box
+                        p.page-subtitle This <br/> is a nice <br/> Page Subtitle
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa saepe nostrum commodi ducimus facilis aliquam accusantium tempore, quam consequuntur quisquam. Minus ipsa, dolorum! Suscipit, debitis incidunt tenetur deleniti facilis recusandae!
+                  .columns.small-12.medium-6
+                    block overviewcolumn2
+                      figure
+                        img(src="images/freedom.jpg", alt="", width="250", height="250")
 
         block content
-          p hi
-        .base-bg
-          .row.thick-row.align-center
-            .columns.small-11.medium-10.large-9
-              h2.thick-margin-bottom Where to next?
-              .row
-                .columns.small-12.medium-4
-                  .next-block
-                    .circle
-                    h3 Our Services
-                    a(href="02--services.html") See what we do
-                .columns.small-12.medium-4
-                  .next-block
-                    .circle
-                    h3 Our Art Director
-                    a(href="type--profile-page.html") Learn about Phil
-                .columns.small-12.medium-4
-                  .next-block
-                    .circle
-                    h3 Randomize it!
-                    a(href="index.html") Take a shot blindfolded
+          .row.align-center
+            .columns.small-12.medium-11.large-10
+              p hi
+
+        include inc/prefooter.jade
+
 
 
       include inc/global-footer.jade

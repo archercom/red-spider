@@ -8,26 +8,41 @@ var scrollMonitor = require('scrollMonitor');
 var hideOnScroll = require('hide-on-scroll');
 
 
+var $body = $('html,body');
+
+/**
+ * scrollTo an element using jQuery
+ * @param  {jQuery object} $obj
+ */
+function scrollTo ($obj) {
+  $body.animate({
+    scrollTop: $obj.offset().top
+  }, 1000);
+}
+
+/**
+ * event handler for anything with (data-smooth-scroll)
+ */
+function smoothScrollHandler () {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var $target = $(this.hash);
+    $target = $target.length ? $target : $('[name=' + this.hash.slice(1) +']');
+    if ($target.length) {
+      scrollTo($target);
+      return false;
+    }
+  }
+}
+
+
+
 var archer = {
   init: function () {
     /**
      * smooth scroll to a section of the page, original source below:
      * http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links
     */
-    var $body = $('html,body');
-    $('a[data-smooth-scroll]').on('click.smooth_scroll', function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $body.animate({
-            scrollTop: target.offset().top
-          }, 1000);
-
-          return false;
-        }
-      }
-    });
+    $('a[data-smooth-scroll]').on('click.smooth_scroll', smoothScrollHandler);
 
 
     // konami
@@ -80,6 +95,8 @@ var archer = {
     $('#main').css('margin-bottom', $('#global-footer').css('height'));
   }
 }
+
+
 
 // initialize the things
 $(document).ready(function () {
