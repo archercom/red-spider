@@ -55,7 +55,8 @@
     "hide-on-scroll": "^0.1.0",
     "jquery": "^2.2.0",
     "scrollmonitor": "^1.0.12",
-    "smoothstate": "^0.7.2"
+    "smoothstate": "^0.7.2",
+    "typed.js": "^1.1.1"
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.min.js",
