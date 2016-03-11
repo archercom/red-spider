@@ -1671,40 +1671,34 @@ select{
     display:inline-block;
     color:inherit; }
 
-.nav-container{
+.global-nav{
   position:fixed;
   top:0;
-  left:0;
-  width:100%;
-  z-index:10;
+  right:0;
+  z-index:100;
   -webkit-backface-visibility:hidden;
           backface-visibility:hidden;
-  margin-top:2.25rem;
-  -webkit-transform:translateX(100%);
-          transform:translateX(100%);
-  -webkit-transition:-webkit-transform 0.5s ease;
-  transition:-webkit-transform 0.5s ease;
-  transition:transform 0.5s ease;
-  transition:transform 0.5s ease, -webkit-transform 0.5s ease; }
-  .nav-container.active{
-    -webkit-transform:translateX(0);
-            transform:translateX(0); }
+  border-right:0.625rem solid #fefefe; }
 
 .nav-toggle{
   display:block;
   width:100%;
-  text-align:right;
-  padding:0.625rem 0; }
+  margin-top:0.625rem;
+  margin-bottom:0.625rem;
+  padding-top:0.625rem;
+  padding-right:0.625rem; }
 
 .nav-list{
+  display:none;
   list-style:none;
   margin:0;
-  text-align:right; }
-  .nav-list li{
-    margin:0.3125rem 0.625rem; }
+  position:absolute;
+  top:100%;
+  right:0; }
   .nav-list a{
-    display:block;
-    text-transform:uppercase; }
+    display:block; }
+  .nav-list.active{
+    display:block; }
 
 .global-footer{
   background-color:#222222;
@@ -2404,13 +2398,17 @@ select{
     margin-top:0.9375rem;
     padding-left:0.9375rem;
     padding-top:0.9375rem; }
-  .nav-container{
-    position:static;
-    -webkit-transform:translateX(0);
-            transform:translateX(0);
-    margin-top:0; }
+  .global-nav{
+    border-width:0.9375rem; }
   .nav-toggle{
     display:none; }
+  .nav-list{
+    position:static;
+    display:block;
+    margin-top:0.9375rem;
+    margin-bottom:0.9375rem;
+    padding-top:0.9375rem;
+    padding-right:0.9375rem; }
   .nav-list > li{
     display:inline-block;
     margin-right:0.625rem; }
@@ -2875,6 +2873,13 @@ select{
     margin-top:1.25rem;
     padding-left:1.25rem;
     padding-top:1.25rem; }
+  .global-nav{
+    border-width:1.25rem; }
+  .nav-list{
+    margin-top:1.25rem;
+    margin-bottom:1.25rem;
+    padding-top:1.25rem;
+    padding-right:1.25rem; }
   .header-1{
     font-size:6.25rem;
     padding:12.5rem 0; }
